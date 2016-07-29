@@ -1,0 +1,26 @@
+@import "common";
+
+$line-width: 10px;
+
+.question {
+  .last-posts {
+    .label {
+      &:not(:last-child) {
+        margin-right: $line-width;
+      }
+    }
+    .question-item-order {
+      width: 5px;
+    }
+    .question-item-avatar {
+      width: 5rem;
+      .avatar {
+        width: 100%;
+      }
+    }
+  }
+  section {
+    padding-top: 20px;
+    @include bottom-line();
+  }
+}

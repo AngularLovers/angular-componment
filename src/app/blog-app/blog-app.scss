@@ -1,0 +1,8 @@
+
+.main-content {
+  padding: 1.5rem;
+}
+
+.aside-content {
+  @extend .main-content;
+}

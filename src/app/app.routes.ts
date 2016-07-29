@@ -5,23 +5,16 @@ import {
   prefetchRouteCallbacks as blogAppPrefetchRouteCallbacks
 } from './blog-app';
 
-import {
-  routes as manageAppRoutes,
-  asyncRoutes as manageAppAsyncRoutes,
-  prefetchRouteCallbacks as manageAppPrefetchRouteCallbacks
-} from './manage-app';
-
 
 export const routes: RouterConfig = [
   { path: '', pathMatch: 'full', redirectTo: '/blog/home' },
   ...blogAppRoutes,
-  ...manageAppRoutes
 ];
 
 // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
 // asyncRoutes is needed for our @angularclass/webpack-toolkit that will allow us to resolve
 // the component correctly
-export const asyncRoutes: AsyncRoutes = Object.assign({}, blogAppAsyncRoutes, manageAppAsyncRoutes);
+export const asyncRoutes: AsyncRoutes = Object.assign({}, blogAppAsyncRoutes);
 
 
 // Optimizations for initial loads
@@ -29,7 +22,6 @@ export const asyncRoutes: AsyncRoutes = Object.assign({}, blogAppAsyncRoutes, ma
 /* tslint:disable:no-string-literal */
 export const prefetchRouteCallbacks: Array<Es6PromiseLoader | Function> = [
   ...blogAppPrefetchRouteCallbacks,
-  ...manageAppPrefetchRouteCallbacks
 ];
 /* tsslint:enable:no-string-literal */
 

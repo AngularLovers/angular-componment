@@ -4,9 +4,9 @@ import { BlogAppComponent } from './blog-app.component';
 
 export const routes: RouterConfig = [
   {
-    path: 'blog', component: BlogAppComponent,
+    path: 'xiaomo', component: BlogAppComponent,
     children: [
-      { path: '', pathMatch: 'full', redirectTo: '/blog/home' },
+      { path: '', pathMatch: 'full', redirectTo: '/xiaomo/home' },
       { path: 'home', component: 'HomeComponent' },
       { path: 'about', component: 'AboutComponent' },
       { path: 'question', component: 'QuestionComponent' },

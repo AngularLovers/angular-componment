@@ -7,7 +7,7 @@ import {
 
 
 export const routes: RouterConfig = [
-  { path: '', pathMatch: 'full', redirectTo: '/blog/home' },
+  { path: '', pathMatch: 'full', redirectTo: '/xiaomo/home' },
   ...blogAppRoutes,
 ];
 

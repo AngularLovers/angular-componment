@@ -19,3 +19,4 @@ typings
 /doc
 .idea/
 *.iml
+*npm*log*

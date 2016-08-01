@@ -1,3 +1,6 @@
+body{
+  background: lightblue;
+}
 .loading {
   margin: 80px auto;
   position: absolute;
@@ -8,7 +11,7 @@
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
-  background: #2dcaa0;
+  background: pink;
   font: 12px "Lucida Grande", Sans-Serif;
   text-align: center;
   line-height: 100px;
@@ -30,7 +33,7 @@
   -moz-border-radius: 70px;
   border-radius: 70px;
 
-  background: #4acaa8;
+  background: lightgreen;
   z-index: -2;
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { WebAsideComponent } from './web-aside';
 import { WebNavbarComponent } from './web-navbar';
 import { WebFooterComponent, WebHeaderComponent } from 'common';
 
@@ -7,7 +6,7 @@ import { WebFooterComponent, WebHeaderComponent } from 'common';
   selector: 'xiaomo-app',
   pipes: [],
   providers: [],
-  directives: [WebHeaderComponent, WebNavbarComponent, WebAsideComponent, WebFooterComponent],
+  directives: [WebHeaderComponent, WebNavbarComponent, WebFooterComponent],
   styles: [
     require('./xiaomo-app.scss')
   ],

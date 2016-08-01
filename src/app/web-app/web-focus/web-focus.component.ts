@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'web-aside',
+  selector: 'web-focus',
   pipes: [],
   directives: [],
   styles: [
-    require('./web-aside.scss')
+    require('./web-focus.scss')
   ],
-  template: require('./web-aside.html')
+  template: require('./web-focus.html')
 })
-export class WebAsideComponent implements OnInit {
+export class WebFocusComponent implements OnInit {
   constructor() {
 
   }

@@ -1,34 +1,29 @@
-<nav class="navbar navbar-static-top" (click)="hideNavBar($event)">
-  <div class="container">
-    <div class="navbar-header collapsed">
-      <button type="button" class="navbar-toggle collapsed" aria-expanded="true" aria-controls="navbar"
-              (click)="toggleNavBarState($event);">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" [routerLink]="['./']">破狼博客</a>
+      <a class="navbar-brand" >小莫</a>
     </div>
-    <div id="navbar" class="navbar-collapse collapse" [class.in]="showNavBar" aria-expanded="true">
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <!--<li><a routerLinkActive="active" [routerLink]="['./']" [routerLinkActiveOptions]="{exact: true}">首页</a></li>-->
-        <li><a routerLinkActive="active" [routerLink]="['./home']">文章</a></li>
-        <li class="dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" dropdown
-            (dropdownStatusChange)="!$event&&hideNavBar()">
-          <a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">站内资源<span
-            class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-header">相关资源</li>
-            <li><a routerLinkActive="active" [routerLink]="['./question']">我要提问</a></li>
-            <li role="separator" class="divider"></li>
-            <li class="dropdown-header">著作与翻译</li>
-            <li><a routerLinkActive="active"
-                   [routerLink]="['./', '2015-12-30-angularjsshen-du-pou-xi-yu-zui-jia-shi-jian-jian-jie.html']">Angularjs深度剖析与最佳实践</a>
-            </li>
-          </ul>
-        </li>
-        <li><a routerLinkActive="active" [routerLink]="['./about']">关于我</a></li>
+        <li routerLinkActive="active" ><a [routerLink]="['./home']">首页 <span class="sr-only">(current)</span></a></li>
+        <li routerLinkActive="active" ><a  [routerLink]="['./goodBlog']">优秀博客推荐</a></li>
+        <li routerLinkActive="active" ><a  [routerLink]="['./focus']">关注的技术</a></li>
+        <li routerLinkActive="active" ><a [routerLink]="['./project']">项目实例</a></li>
+        <li routerLinkActive="active" ><a  [routerLink]="['./about']">关于我</a></li>
+        <li routerLinkActive="active" ><a target="_blank" href="http://blog.xiaomo.info">我的博客</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li><a >登录</a></li>
+        <li><a >注册</a></li>
       </ul>
     </div>
   </div>

@@ -8,7 +8,10 @@ export const routes: RouterConfig = [
     children: [
       { path: '', pathMatch: 'full', redirectTo: '/xiaomo/home' },
       { path: 'home', component: 'WebHomeComponent' },
-      { path: 'about', component: 'WEBAboutComponent' }
+      { path: 'focus', component: 'WebFocusComponent' },
+      { path: 'goodBlog', component: 'WebGoodBlogComponent' },
+      { path: 'project', component: 'WebProjectComponent' },
+      { path: 'about', component: 'WebAboutComponent' }
     ]
   }
 ];
@@ -18,6 +21,9 @@ export const routes: RouterConfig = [
 // the component correctly
 export const asyncRoutes: AsyncRoutes = {
   'WebHomeComponent': require('es6-promise-loader!./web-home'),
+  'WebFocusComponent': require('es6-promise-loader!./web-focus'),
+  'WebGoodBlogComponent': require('es6-promise-loader!./web-good-blog'),
+  'WebProjectComponent': require('es6-promise-loader!./web-project'),
   'WebAboutComponent': require('es6-promise-loader!./web-about')
 };
 

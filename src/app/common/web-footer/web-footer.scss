@@ -1,9 +1,14 @@
 .footer {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  margin-bottom: 1rem;
+  position: absolute;
+  text-align: center;
+  bottom:10px;
+  width:100%;
+}
+
+.copyright {
+  span {
+    color: gray;
+    font-size: 13px;
+    font-family: "微软雅黑 Light", serif;
+  }
 }

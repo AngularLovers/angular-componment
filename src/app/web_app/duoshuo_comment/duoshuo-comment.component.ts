@@ -3,8 +3,8 @@ import { RebirthWindow } from 'rebirth-common';
 import { Article } from 'common';
 
 @Component({
-  selector: 'duoshuo-comment',
-  template: require('./duoshuo-comment.html'),
+  selector: 'duoshuo_comment',
+  template: require('./duoshuo_comment.html'),
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DuoShuoCommentComponent implements OnInit {

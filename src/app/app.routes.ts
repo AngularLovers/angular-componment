@@ -3,7 +3,7 @@ import {
   routes as xiaomoAppRoutes,
   asyncRoutes as xiaomoAppAsyncRoutes,
   prefetchRouteCallbacks as xiaomoAppPrefetchRouteCallbacks
-} from './web-app';
+} from './web_app';
 
 
 export const routes: RouterConfig = [

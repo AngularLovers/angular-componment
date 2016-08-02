@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'web-good-blog',
+  selector: 'web-goodBlog',
   directives: [],
   pipes: [],
-  styles: [require('./web-good-blog.scss')],
-  template: require('./web-good-blog.html')
+  styles: [require('./web-goodBlog.scss')],
+  template: require('./web-goodBlog.html')
 })
 export class WebGoodBlogComponent implements OnInit {
 

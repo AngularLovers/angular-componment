@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { WebBannerComponent } from './../web-banner';
+import { WebBannerComponent } from './web_banner';
 
 @Component({
   selector: 'web-home',

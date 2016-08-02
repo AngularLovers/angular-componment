@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WebNavbarComponent } from './web-navbar';
+import { WebNavbarComponent } from './web_navbar';
 import { WebFooterComponent, WebHeaderComponent } from 'common';
 
 @Component({

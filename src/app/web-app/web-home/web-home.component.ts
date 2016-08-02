@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { ArticleListComponent } from '../article-list';
+
+import { WebBannerComponent } from './../web-banner';
 
 @Component({
   selector: 'web-home',
   providers: [],
-  directives: [ArticleListComponent],
+  directives: [WebBannerComponent],
   pipes: [],
   styles: [require('./web-home.scss')],
   template: require('./web-home.html')

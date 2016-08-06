@@ -1,14 +1,9 @@
 import { WebpackAsyncRoute } from "@angularclass/webpack-toolkit";
 import { RouterConfig } from "@angular/router";
-
-import {
-  routes as xiaomoAppRoutes,
-  asyncRoutes as xiaomoAppAsyncRoutes,
-  prefetchRouteCallbacks as xiaomoAppPrefetchRouteCallbacks
-} from "./web_app";
+import { xiaomoAppRoutes, xiaomoAppAsyncRoutes, xiaomoAppPrefetchRouteCallbacks } from "./web_app/xiaomo-app.routes";
 
 export const routes: RouterConfig = [
-  { path: '', pathMatch: 'full', redirectTo: '/xiaomo/home' },
+  {path: '', pathMatch: 'full', redirectTo: '/xiaomo/home'},
   ...xiaomoAppRoutes,
 ];
 
@@ -18,7 +13,6 @@ export const routes: RouterConfig = [
 export const asyncRoutes: AsyncRoutes = {
   // we have to use the alternative syntax for es6-promise-loader to grab the routes
   ...xiaomoAppAsyncRoutes
-  // must be exported with detail/index.ts
 };
 
 
@@ -26,7 +20,6 @@ export const asyncRoutes: AsyncRoutes = {
 // An array of callbacks to be invoked after bootstrap to prefetch async routes
 export const prefetchRouteCallbacks: Array<IdleCallbacks> = [
   ...xiaomoAppPrefetchRouteCallbacks
-  // es6-promise-loader returns a function
 ];
 
 

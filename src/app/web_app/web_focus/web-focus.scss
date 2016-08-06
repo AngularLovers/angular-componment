@@ -1,5 +1,3 @@
-@import 'common';
-
 .blog-aside {
   section {
     .content {
@@ -9,7 +7,7 @@
       max-width: 150px;
     }
   }
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     .my-books-list {
       li {
         display: inline-block;

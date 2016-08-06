@@ -2,7 +2,7 @@ import { RouterConfig } from '@angular/router';
 import { XiaomoAppComponent } from './xiaomo-app.component';
 
 
-export const routes: RouterConfig = [
+export const xiaomoAppRoutes: RouterConfig = [
   {
     path: 'xiaomo', component: XiaomoAppComponent,
     children: [
@@ -18,7 +18,7 @@ export const routes: RouterConfig = [
 
 // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
 // the component correctly
-export const asyncRoutes: AsyncRoutes = {
+export const xiaomoAppAsyncRoutes: AsyncRoutes = {
   'WebHomeComponent': require('es6-promise-loader!./web_home'),
   'WebFocusComponent': require('es6-promise-loader!./web_focus'),
   'WebGoodBlogComponent': require('es6-promise-loader!./web_goodBlog'),
@@ -30,7 +30,7 @@ export const asyncRoutes: AsyncRoutes = {
 // Optimizations for initial loads
 // An array of callbacks to be invoked after bootstrap to prefetch async routes
 /* tslint:disable:no-string-literal */
-export const prefetchRouteCallbacks: Array<Es6PromiseLoader | Function> = [];
+export const xiaomoAppPrefetchRouteCallbacks: Array<Es6PromiseLoader | Function> = [];
 /* tsslint:enable:no-string-literal */
 
 // Es6PromiseLoader and AsyncRoutes interfaces are defined in custom-typings

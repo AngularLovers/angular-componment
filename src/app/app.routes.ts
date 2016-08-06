@@ -1,34 +1,21 @@
 import { WebpackAsyncRoute } from "@angularclass/webpack-toolkit";
-import { RouterConfig } from "@angular/router";
+import { RouterConfig, provideRouter } from "@angular/router";
+import { WebHomeComponent } from "./web_home/web-home.component";
+import { WebFocusComponent } from "./web_focus/web-focus.component";
+import { WebGoodBlogComponent } from "./web_goodBlog/web-goodBlog.component";
+import { WebProjectComponent } from "./web_project/web-project.component";
+import { WebAboutComponent } from "./web_about/web-about.component";
 
 export const routes: RouterConfig = [
     {path: '**', pathMatch: 'full', redirectTo: 'home'},
-    {path: 'home', component: 'WebHomeComponent'},
-    {path: 'focus', component: 'WebFocusComponent'},
-    {path: 'goodBlog', component: 'WebGoodBlogComponent'},
-    {path: 'project', component: 'WebProjectComponent'},
-    {path: 'about', component: 'WebAboutComponent'}
+    {path: 'home', component: WebHomeComponent},
+    {path: 'focus', component: WebFocusComponent},
+    {path: 'goodBlog', component: WebGoodBlogComponent},
+    {path: 'project', component: WebProjectComponent},
+    {path: 'about', component: WebAboutComponent}
   ]
   ;
 
-// Async load a component using Webpack's require with es6-promise-loader and webpack `require`
-// asyncRoutes is needed for our @angularclass/webpack-toolkit that will allow us to resolve
-// the component correctly
-
-export const asyncRoutes: AsyncRoutes = {
-  'WebHomeComponent': require('es6-promise-loader!./web_home'),
-  'WebFocusComponent': require('es6-promise-loader!./web_focus'),
-  'WebGoodBlogComponent': require('es6-promise-loader!./web_goodBlog'),
-  'WebProjectComponent': require('es6-promise-loader!./web_project'),
-  'WebAboutComponent': require('es6-promise-loader!./web_about')
-};
-
-
-// Optimizations for initial loads
-// An array of callbacks to be invoked after bootstrap to prefetch async routes
-export const prefetchRouteCallbacks: Array<IdleCallbacks> = [
-  // es6-promise-loader returns a function
+export const APPLICATION_ROUTER_DIRECTIVES = [
+  provideRouter(routes)
 ];
-
-
-// Es6PromiseLoader and AsyncRoutes interfaces are defined in custom-typings

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ><img  class="img-circle img-size" src="http://static.xiaomo.info/images/avatar.png" alt=""></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active" ><a  [routerLink]="['./home']" >首页 <span class="sr-only">(current)</span></a></li>
+        <li routerLinkActive="active" ><a  [routerLink]="['./goodBlog']" >优秀博客推荐</a></li>
+        <li routerLinkActive="active" ><a  [routerLink]="['./focus']" >关注的技术</a></li>
+        <li routerLinkActive="active" ><a  [routerLink]="['./project']" >项目实例</a></li>
+        <li routerLinkActive="active" ><a  [routerLink]="['./about']" >关于我</a></li>
+        <li routerLinkActive="active" ><a  target="_blank" href="http://blog.xiaomo.info" >我的博客</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li><a >登录</a></li>
+        <li><a >注册</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

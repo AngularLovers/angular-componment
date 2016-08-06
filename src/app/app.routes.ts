@@ -16,6 +16,6 @@ export const routes: RouterConfig = [
   ]
   ;
 
-export const APPLICATION_ROUTER_DIRECTIVES = [
+export const APPLICATION_ROUTER_PROVIDERS = [
   provideRouter(routes)
 ];

@@ -76,6 +76,10 @@ module.exports = {
 
     // Make sure root is src
     root: helpers.root('src'),
+    alias: {
+      'common': helpers.root('./src/app/common/index.ts'),
+      'loading.css': helpers.root('./src/assets/css/loading.css')
+    },
 
     // remove other default values
     modulesDirectories: ['node_modules'],

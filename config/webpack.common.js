@@ -76,7 +76,9 @@ module.exports = {
 
     // Make sure root is src
     root: helpers.root('src'),
-
+    alias: {
+      'common': helpers.root('./src/app/common/index.ts'),
+    },
     // remove other default values
     modulesDirectories: ['node_modules'],
 
@@ -162,6 +164,10 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: ['to-string-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        loader: `raw!postcss!sass?outputStyle=expanded&includePaths[]=${helpers.root('src/styles')}/`
       },
 
       /* Raw loader support for *.html

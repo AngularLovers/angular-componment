@@ -1,5 +1,5 @@
 /**
- * @author: @AngularLovers
+ * @author: @AngularClass
  */
 const helpers = require('./helpers');
 const ghDeploy = require('./github-deploy');

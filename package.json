@@ -1,14 +1,14 @@
 {
-  "name": "angular2-webpack-starter",
-  "version": "5.0.5",
-  "description": "An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by AngularClass",
+  "name": "xiaomo-info-web",
+  "version": "1.0.0",
+  "description": "小莫的个人空间",
   "keywords": [
     "angular2",
     "webpack",
     "typescript"
   ],
-  "author": "Patrick Stapleton <patrick@angularclass.com>",
-  "homepage": "https://github.com/angularclass/angular2-webpack-starter",
+  "author": "小莫 <83387856@qq.com>",
+  "homepage": "https://github.com/AngularLovers/xiaomo-info-web",
   "license": "MIT",
   "scripts": {
      "rimraf": "rimraf",
@@ -85,7 +85,7 @@
     "@angularclass/request-idle-callback": "^1.0.7",
     "@angularclass/conventions-loader": "^1.0.2",
     "angular2-template-loader": "^0.4.0",
-    
+
     "ie-shim": "^0.1.0",
     "core-js": "^2.4.0",
     "rxjs": "5.0.0-beta.6",
@@ -155,10 +155,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/angular2-webpack-starter.git"
+    "url": "https://github.com/xiaomo-info/xiaomo-info-web.git"
   },
   "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
+    "url": "https://github.com/xiaomo-info/xiaomo-info-web/issues"
   },
   "engines": {
     "node": ">= 4.2.1",

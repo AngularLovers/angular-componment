@@ -17,7 +17,6 @@ export const routes: RouterConfig = [
 ];
 
 // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
-// asyncRoutes is needed for our @angularclass/webpack-toolkit that will allow us to resolve
 // the component correctly
 export const asyncRoutes: AsyncRoutes = {
   'WebHomeComponent': require('es6-promise-loader!./web_home'),

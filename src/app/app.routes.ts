@@ -1,5 +1,5 @@
-import { WebpackAsyncRoute } from "@angularclass/webpack-toolkit";
 import { RouterConfig, provideRouter } from "@angular/router";
+
 import { WebHomeComponent } from "./web_home/web-home.component";
 import { WebFocusComponent } from "./web_focus/web-focus.component";
 import { WebGoodBlogComponent } from "./web_goodBlog/web-goodBlog.component";

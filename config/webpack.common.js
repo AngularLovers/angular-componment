@@ -157,7 +157,10 @@ module.exports = {
         test: /\.json$/,
         loader: 'json-loader'
       },
-
+      {
+        test: /\.scss$/,
+        loader: `raw!postcss!sass?outputStyle=expanded&includePaths[]=${helpers.root('src/styles')}/`
+      },
       /*
        * to string and css loader support for *.css files
        * Returns file content as string

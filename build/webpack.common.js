@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const cssnano = require('cssnano');
 const utils = require('./utils');
-const METADATA = require('../config/common.json');
-
 
 var CopyWebpackPlugin = (CopyWebpackPlugin = require('copy-webpack-plugin'), CopyWebpackPlugin.default || CopyWebpackPlugin);
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -25,8 +23,6 @@ module.exports = {
    *
    * See: (custom attribute)
    */
-  metadata: METADATA,
-
   /*
    * Cache generated modules and chunks to improve performance for multiple incremental builds.
    * This is enabled by default in watch mode.

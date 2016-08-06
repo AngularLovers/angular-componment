@@ -15,7 +15,7 @@ import { AppState } from './app.service';
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   directives: [WebHeaderComponent, WebNavbarComponent, WebFooterComponent],
-  styles:[ './app.style.scss'],
+  styles:[require('./app.style.scss')],
   template: require('./app.html')
 })
 export class App {

@@ -1,6 +1,8 @@
-export * from './web_footer';
-export * from './web_header';
-export * from './dropdown';
-export * from './loading';
-export * from './pager';
+export * from './webFooter';
+export * from './webHeader';
+export * from './commonDropdown';
+export * from './commonLoading';
+export * from './commonPager';
+export * from './commonClock';
+// export * from './commonDuoshuo';
 

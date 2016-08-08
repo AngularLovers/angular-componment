@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'pager',
+  selector: 'commonPager',
   styles: [require('./pager.scss')],
   template: require('./pager.html'),
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,7 +1,7 @@
 import { Directive, HostListener, Output, Input, EventEmitter, Renderer, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[dropdown]'
+  selector: '[commonDropdown]'
 })
 export class DropdownDirective {
   @Output() dropdownStatusChange = new EventEmitter();

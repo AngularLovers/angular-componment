@@ -11,6 +11,7 @@ const helpers = require('./helpers');
 // problem with copy-webpack-plugin
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
 
@@ -221,6 +222,10 @@ module.exports = {
      */
     new webpack.optimize.CommonsChunkPlugin({
       name: ['polyfills', 'vendor'].reverse()
+    }),
+
+    new WebpackNotifierPlugin({
+      title: '小莫的个人网站'
     }),
 
     /*

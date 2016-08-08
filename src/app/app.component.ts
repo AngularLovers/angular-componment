@@ -4,7 +4,7 @@
 import { Component,OnInit, ViewEncapsulation } from '@angular/core';
 
 import { WebNavbarComponent } from './webHome/homeHavbar';
-import { WebFooterComponent, WebHeaderComponent } from 'common';
+import { WebFooterComponent, WebHeaderComponent,BaBackTop } from 'common';
 import { AppState } from './app.service';
 import { BaThemePreloader,BaThemeSpinner,Logger} from "../services";
 
@@ -15,7 +15,7 @@ import { BaThemePreloader,BaThemeSpinner,Logger} from "../services";
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  directives: [WebHeaderComponent, WebNavbarComponent, WebFooterComponent],
+  directives: [WebHeaderComponent, WebNavbarComponent, WebFooterComponent,BaBackTop],
   providers: [BaThemeSpinner,Logger],
   styles:[require('./app.scss'),require('normalize.css')],
   template: require('./app.html')

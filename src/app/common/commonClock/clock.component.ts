@@ -52,9 +52,9 @@ start(){
   this.splitDigits(this.currentMinutes, this.minutes);
   this.splitDigits(this.currentHours, this.hours);
 
-  this.printClass(this.hours[0], $('.hours .digit:first-of-type'));
-  this.printClass(this.hours[1], $('.hours .digit:last-of-type'));
-  this.printClass(this.minutes[0], $('.minutes .digit:first-of-type'));
-  this.printClass(this.minutes[1], $('.minutes .digit:last-of-type'));
+  this.printClass(this.hours[0], jQuery('.hours .digit:first-of-type'));
+  this.printClass(this.hours[1], jQuery('.hours .digit:last-of-type'));
+  this.printClass(this.minutes[0], jQuery('.minutes .digit:first-of-type'));
+  this.printClass(this.minutes[1], jQuery('.minutes .digit:last-of-type'));
 }
 }

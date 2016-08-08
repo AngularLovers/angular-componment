@@ -1,7 +1,7 @@
 /*
  * Angular 2 decorators and services
  */
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component,OnInit, ViewEncapsulation } from '@angular/core';
 
 import { WebNavbarComponent } from './web_home/web_navbar';
 import { WebFooterComponent, WebHeaderComponent } from 'common';
@@ -18,7 +18,7 @@ import { AppState } from './app.service';
   styles:[require('./app.style.scss')],
   template: require('./app.html')
 })
-export class App {
+export class App implements OnInit{
 
   constructor(
     public appState: AppState) {

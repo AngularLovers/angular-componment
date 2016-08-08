@@ -7,12 +7,12 @@ import { WebProjectComponent } from "./web_project/web-project.component";
 import { WebAboutComponent } from "./web_about/web-about.component";
 
 export const routes: RouterConfig = [
-    {path: '**', pathMatch: 'full', redirectTo: 'home'},
     {path: 'home', component: WebHomeComponent},
     {path: 'focus', component: WebFocusComponent},
     {path: 'goodBlog', component: WebGoodBlogComponent},
     {path: 'project', component: WebProjectComponent},
-    {path: 'about', component: WebAboutComponent}
+    {path: 'about', component: WebAboutComponent},
+    {path: '**', pathMatch: 'full', redirectTo: 'home'}
   ]
   ;
 

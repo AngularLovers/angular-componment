@@ -1,10 +1,10 @@
 import { RouterConfig, provideRouter } from "@angular/router";
 
-import { WebHomeComponent } from "./web_home/web-home.component";
-import { WebFocusComponent } from "./web_focus/web-focus.component";
-import { WebGoodBlogComponent } from "./web_goodBlog/web-goodBlog.component";
-import { WebProjectComponent } from "./web_project/web-project.component";
-import { WebAboutComponent } from "./web_about/web-about.component";
+import { WebHomeComponent } from "./webHome/web-home.component";
+import { WebFocusComponent } from "./webFocus/web-focus.component";
+import { WebGoodBlogComponent } from "./webGoodBlog/web-goodBlog.component";
+import { WebProjectComponent } from "./webproject/web-project.component";
+import { WebAboutComponent } from "./webAbout/web-about.component";
 
 export const routes: RouterConfig = [
     {path: 'home', component: WebHomeComponent},

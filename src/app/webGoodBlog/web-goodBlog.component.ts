@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { ActivatedRoute } from '@angular/router';
-import { GoodBlogItemComponent } from "./goodBlog_item/goodBlog-item.component";
+import { GoodBlogItemComponent } from "./goodBlogItem/goodBlog-item.component";
 import { GoodBlogService } from "./web-goodBlog.service";
 
 @Component({

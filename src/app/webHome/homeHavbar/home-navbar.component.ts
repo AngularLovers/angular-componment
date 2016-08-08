@@ -7,8 +7,8 @@ import { DropdownDirective } from 'common';
   providers: [],
   directives: [DropdownDirective, RouterLinkActive],
   pipes: [],
-  styles: [require('./web-navbar.scss')],
-  template: require('./web-navbar.html'),
+  styles: [require('./home-navbar.scss')],
+  template: require('./home-navbar.html'),
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WebNavbarComponent {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { WebBannerComponent } from './web_banner';
-import { WebIntroduceComponent } from './web_introduce';
+import { WebBannerComponent } from './homeBanner';
+import { WebIntroduceComponent } from './homeIntroduce';
 
 
 @Component({

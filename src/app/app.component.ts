@@ -3,7 +3,7 @@
  */
 import { Component,OnInit, ViewEncapsulation } from '@angular/core';
 
-import { WebNavbarComponent } from './web_home/web_navbar';
+import { WebNavbarComponent } from './webHome/homeHavbar';
 import { WebFooterComponent, WebHeaderComponent } from 'common';
 import { AppState } from './app.service';
 

@@ -3,8 +3,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'web-banner',
-  template: require('./web-banner.html'),
-  styles: [require('./web-banner.scss')]
+  template: require('./home-banner.html'),
+  styles: [require('./home-banner.scss')]
 })
 export class WebBannerComponent implements OnInit {
 

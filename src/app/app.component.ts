@@ -1,8 +1,6 @@
 /*
  * Angular 2 decorators and services
  */
-import './app.loader.ts';
-
 import { Component,OnInit, ViewEncapsulation } from '@angular/core';
 
 import { WebNavbarComponent } from './webHome/homeHavbar';

@@ -78,8 +78,7 @@ module.exports = {
     // Make sure root is src
     root: helpers.root('src'),
     alias: {
-      'common': helpers.root('./src/app/common/index.ts'),
-      'loading.scss': helpers.root('./src/assets/css/loading.scss')
+      'common': helpers.root('./src/app/common/index.ts')
     },
 
     // remove other default values

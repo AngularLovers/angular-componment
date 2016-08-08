@@ -19,33 +19,36 @@ import { BaThemePreloader,BaThemeSpinner,Logger} from "../services";
   encapsulation: ViewEncapsulation.None,
   directives: [WebHeaderComponent, WebNavbarComponent, WebFooterComponent],
   providers: [BaThemeSpinner,Logger],
-  styles:[require('./app.style.scss'),require('normalize.css')],
+  styles:[require('./app.scss'),require('normalize.css')],
   template: require('./app.html')
 })
 export class App implements OnInit{
 
+  /**
+   * 构造函数
+   * @param spinner
+   * @param appState
+   */
   constructor(
     private spinner:BaThemeSpinner,
     public appState: AppState) {
 
   }
 
+  /**
+   * angular2初始化函数
+   */
   ngOnInit() {
     console.log('Initial App State', this.appState.state);
   }
 
+  /**
+   * 载入动画
+   */
   public ngAfterViewInit():void {
-    BaThemePreloader.load().then((values) => {
+    BaThemePreloader.load().then(() => {
       this.spinner.hide();
     });
   }
 
 }
-
-/*
- * Please review the https://github.com/AngularClass/angular2-examples/ repo for
- * more angular app examples that you may copy/paste
- * (The examples may not be updated as quickly. Please open an issue on github for us to update it)
- * For help or questions please contact us at @AngularClass on twitter
- * or our chat on Slack at https://AngularClass.com/slack-join
- */

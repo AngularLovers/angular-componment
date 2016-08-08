@@ -23,7 +23,7 @@ export class WebGoodBlogComponent implements OnInit {
 
   ngOnInit() {
     this.goodBlogService.getGoodBlogItems().subscribe(res=> {
-      this.goodBlogItems = res
+      this.goodBlogItems = res;
     });
     // this.activatedRoute.params.subscribe((params: any) => {
     //   console.log(params.id);

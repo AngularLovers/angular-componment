@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http } from "@angular/http";
+import { Http ,Response} from "@angular/http";
+import { Observable } from "rxjs";
+
+import { goodBlogUrl } from "../api";
 
 @Injectable()
 export class GoodBlogService {
@@ -7,21 +10,10 @@ export class GoodBlogService {
   constructor(private http: Http) {
   }
 
-  getGoodBlogItems(): any {
-    return this.http
-      .get('http://xiaomo-info.oss-cn-shanghai.aliyuncs.com/goodBlog.json')
-      .toPromise()
-      .then(response=>{
-        return response.json();
-      })
-      .catch(this.handleError);
+  getGoodBlogItems():Observable<Response> {
+    return this.http.get(goodBlogUrl)
+      .map((res: Response) => res.json())
   };
-
-  private handleError(error: any) {
-    console.error('An error occurred', error);
-    return Promise.reject(error.message || error);
-  }
-
 
 
 }

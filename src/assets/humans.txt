@@ -9,7 +9,7 @@
 
   <name>
   PatrickJS -- @gdi2290
-  AngularClass -- @AngularClass
+  AngularClass -- @AngularLovers
 
 # TECHNOLOGY COLOPHON
 

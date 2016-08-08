@@ -1,8 +1,7 @@
-import { Component,Response, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { ActivatedRoute } from '@angular/router';
 import { GoodBlogItemComponent } from "./goodBlog_item/goodBlog-item.component";
 import { GoodBlogService } from "./web-goodBlog.service";
-import { GoodBlogItem } from "./goodBlog_item/goodBlog-item.model";
 
 @Component({
   selector: 'web-goodBlog',
@@ -14,7 +13,7 @@ import { GoodBlogItem } from "./goodBlog_item/goodBlog-item.model";
 })
 export class WebGoodBlogComponent implements OnInit {
 
-  goodBlog: Response<GoodBlogItem> = [];
+  goodBlogItems;
 
   constructor(private goodBlogService: GoodBlogService,
               // private activatedRoute: ActivatedRoute
@@ -24,7 +23,7 @@ export class WebGoodBlogComponent implements OnInit {
 
   ngOnInit() {
     this.goodBlogService.getGoodBlogItems().subscribe(res=> {
-      this.goodBlog = res
+      this.goodBlogItems = res
     });
     // this.activatedRoute.params.subscribe((params: any) => {
     //   console.log(params.id);

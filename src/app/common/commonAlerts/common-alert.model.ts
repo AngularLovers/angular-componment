@@ -1,8 +1,23 @@
 export class AlertModel {
-  type: string; // 控制颜色
-  dismissTime: number; //多少秒后关闭
-  closable: boolean; //是否可关闭
-  msg: string; //显示的信息
+  /**
+   *  类型(控制颜色)  success|info|danger 三种
+   */
+  type: string;
+
+  /**
+   *  消失时间（多少秒后关闭）
+   */
+  dismissTime: number;
+
+  /**
+   *  是否可关闭
+   */
+  closable: boolean;
+
+  /**
+   * 显示的信息
+   */
+  msg: string;
 
   constructor(type: string, msg: string, dismissTime: number, closable?: boolean) {
     this.type = type;

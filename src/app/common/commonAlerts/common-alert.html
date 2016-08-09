@@ -1,3 +1,7 @@
 <alert *ngFor="let alert of alerts;let i = index" dismissOnTimeout="{{alert.dismissTime}}" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+   <span *ngIf="alert.type == 'success'"><i class="glyphicon glyphicon-ok"></i></span>
+   <span *ngIf="alert.type == 'danger'"><i class="glyphicon glyphicon-remove"></i></span>
+   <span *ngIf="alert.type == 'info'"><i class="glyphicon glyphicon-info-sign "></i></span>
+  &nbsp;&nbsp;
   {{ alert?.msg }}
 </alert>

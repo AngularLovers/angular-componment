@@ -18,7 +18,7 @@ export class WebFocusComponent implements OnInit {
   constructor() {
     this.alerts = [
       {
-        type: 'danger',
+        type: 'info',
         msg: '这是一个提示危险的消息.',
         dismissTime: 30000,
         closable: true

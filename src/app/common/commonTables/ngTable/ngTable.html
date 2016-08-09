@@ -1,0 +1,19 @@
+<table class="table table-striped table-bordered dataTable"
+       role="grid" >
+  <thead>
+  <tr role="row">
+    <th *ngFor="let column of columns" [ngTableSorting]="config" [column]="column" (sortChanged)="onChangeTable($event)">
+      {{column.title}}
+      <i *ngIf="config && column.sort" class="pull-right fa"
+         [ngClass]="{'fa-chevron-down': column.sort === 'desc', 'fa-chevron-up': column.sort === 'asc'}"></i>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- 每页展示10条数据，这里应该循环10次 -->
+  <tr *ngFor="let row of rows">
+    <!-- 第二层循环 row*column(10*6) -->
+    <td *ngFor="let column of columns">{{getData(row, column.name)}}</td>
+  </tr>
+  </tbody>
+</table>

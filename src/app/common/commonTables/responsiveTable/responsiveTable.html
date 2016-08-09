@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+      <th>#</th>
+      <th>名字</th>
+      <th>职位</th>
+      <th>用户名</th>
+      <th>邮箱</th>
+      <th>状态</th>
+    </tr>
+    <tr *ngFor="let item of peopleTableData">
+      <td class="table-id">{{ item.id }}</td>
+      <td>{{ item.firstName }}</td>
+      <td>{{ item.lastName }}</td>
+      <td>{{ item.username }}</td>
+      <td><a class="email-link" href="mailto:{{ item.email }}">{{ item.email }}</a></td>
+      <td>
+        <button ngClass="{status-button btn btn-xs btn-{{ item.status }}">{{ item.status }}</button>
+      </td>
+    </tr>
+  </table>
+</div>

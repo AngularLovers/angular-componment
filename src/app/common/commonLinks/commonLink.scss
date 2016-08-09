@@ -1,0 +1,44 @@
+
+i {
+  font-size: 20px;
+}
+
+.btn-danger {
+  background: none;
+  color: #d9534f;
+}
+.btn-danger:hover {
+  color: darken(#d9534f,10%);
+}
+.btn-danger:active {
+  background: none;
+  color: darken(#d9534f,20%);
+}
+.btn-info {
+  background: none;
+  color: #5bc0de;
+
+}
+.btn-info:hover {
+  color: darken(#5bc0de,10%);
+}
+.btn-info:active {
+  background: none;
+  color: darken(#5bc0de,20%);
+}
+
+.iconBtn{
+  -webkit-text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  -moz-text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.iconBtn:hover{
+  -webkit-text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+-moz-text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+a{
+  // float: left;
+  // width: 100%;
+}

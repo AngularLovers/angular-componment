@@ -1,8 +1,10 @@
+// 项目相关公共组件
 export * from './webFooter';
 export * from './webHeader';
-export * from './commonDropdown';
-export * from './commonPager';
-export * from './commonClock';
+
+// 通用组件
+export * from './commonDropdowns';
+export * from './commonPages';
 export * from './commonBackTop';
-// export * from './commonDuoshuo';
+
 

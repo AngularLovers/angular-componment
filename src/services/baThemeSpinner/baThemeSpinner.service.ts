@@ -14,7 +14,7 @@ export class BaThemeSpinner {
     this.element.style['display'] = 'block';
   }
 
-  public hide(delay:number = 2000):void {
+  public hide(delay:number = 0):void {
     setTimeout(() => {
       this.element.style['display'] = 'none';
     }, delay);

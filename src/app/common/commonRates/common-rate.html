@@ -1,0 +1,9 @@
+<h4>请评分</h4>
+<rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"
+        (onHover)="hoveringOver($event)" (onLeave)="resetStar($event)"
+        [titles]="['one','two','three']"></rating>
+<span class="label"
+      [ngClass]="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}"
+      [ngStyle]="{display: (overStar && !isReadonly) ? 'inline' : 'none'}">{{percent}}%</span>
+<br/><br/>
+<button class="btn btn-sm btn-success" (click)="submitRateOperate()">确定</button>

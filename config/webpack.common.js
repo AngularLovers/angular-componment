@@ -78,7 +78,8 @@ module.exports = {
     // Make sure root is src
     root: helpers.root('src'),
     alias: {
-      'common': helpers.root('./src/app/common/index.ts')
+      'common': helpers.root('./src/app/common/index.ts'),
+      'service': helpers.root('./src/services/index.ts')
     },
 
     // remove other default values

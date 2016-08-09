@@ -6,5 +6,6 @@ export * from './webHeader';
 export * from './commonDropdowns';
 export * from './commonPages';
 export * from './commonBackTop';
+export * from './commonAlerts';
 
 

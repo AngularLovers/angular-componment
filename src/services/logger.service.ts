@@ -15,17 +15,17 @@
 
 
 export class Logger{
-  debug(msg:any){
+  public static debug(msg:any){
     console.debug(msg);
   }
-  error(msg:any){
+  public static error(msg:any){
     console.error(msg);
   }
-  warn(msg:any){
+  public static warn(msg:any){
     console.warn(msg);
   }
-  info(msg:any){
+  public static info(msg:any){
     console.info(msg);
   }
-  
+
 }

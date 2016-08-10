@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Logger } from "service";
-import {CommonBadgeComponent,CommonAlertComponent, CommonCanvasComponent,CommonRateComponent,AlertModel } from "common";
+import {CommonButtonComponent,CommonBadgeComponent,CommonAlertComponent, CommonCanvasComponent,CommonRateComponent,AlertModel } from "common";
 
 @Component({
   selector: 'web-focus',
   pipes: [],
-  directives: [CommonBadgeComponent,CommonAlertComponent,CommonRateComponent,CommonCanvasComponent],
+  directives: [CommonButtonComponent,CommonBadgeComponent,CommonAlertComponent,CommonRateComponent,CommonCanvasComponent],
   styles: [
     require('./web-focus.scss')
   ],
@@ -46,6 +46,10 @@ export class WebFocusComponent implements OnInit {
    */
   alertRate(rate){
     Logger.alert(rate);
+  }
+
+  consoleRate(method){
+    alert(method);
   }
 
   ngOnInit() {

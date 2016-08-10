@@ -4,13 +4,21 @@ body {
   overflow: hidden;
 }
 
-body{
+body #preloader{
   perspective-origin: 50% 50%;
   perspective: 1000px;
   background: #141D22 radial-gradient(ellipse at center, #082037 0%, #0a141a 50%);
 }
 
-.atome {
+.atome{
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: #000;
+  width:100%;
+  height:100%;
+}
+.box {
   position: absolute;
   top: 0;
   left: 0;

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Logger } from "service";
-import {CommonAlertComponent, CommonCanvasComponent,CommonRateComponent,AlertModel } from "common";
+import {CommonBadgeComponent,CommonAlertComponent, CommonCanvasComponent,CommonRateComponent,AlertModel } from "common";
 
 @Component({
   selector: 'web-focus',
   pipes: [],
-  directives: [CommonAlertComponent,CommonRateComponent,CommonCanvasComponent],
+  directives: [CommonBadgeComponent,CommonAlertComponent,CommonRateComponent,CommonCanvasComponent],
   styles: [
     require('./web-focus.scss')
   ],

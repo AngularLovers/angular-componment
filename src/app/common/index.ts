@@ -9,5 +9,6 @@ export * from './commonBackTop';
 export * from './commonAlerts';
 export * from './commonRates';
 export * from './commonCanvas';
+export * from './commonBadges';
 
 

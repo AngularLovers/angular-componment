@@ -10,6 +10,12 @@ export * from './common-button.component';
  *   icon 图标  不传就没有图标
  *   isRadius 是否是圆角
  *
- *   <common-button [msg]="'测试'" [color]="'btn-danger'" [isRadius]="true"></common-button>
+ *  父组件中定义些方法然后供子组件调用
+ *  clickEvent(data){
+ *   // todo
+ *  }
+ *
+ *   使用
+ *   <common-button (clickEvent)="clickEvent($event)" [msg]="'测试'" [color]="'btn-danger'" [isRadius]="true"></common-button>
  *
  * */

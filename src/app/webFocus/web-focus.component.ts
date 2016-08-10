@@ -51,7 +51,9 @@ export class WebFocusComponent implements OnInit {
   consoleRate(method){
     alert(method);
   }
-
+clickEvent(data){
+  alert("click了，msg："+data)
+}
   ngOnInit() {
 
   }

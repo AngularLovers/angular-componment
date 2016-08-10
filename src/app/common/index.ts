@@ -7,5 +7,7 @@ export * from './commonDropdowns';
 export * from './commonPages';
 export * from './commonBackTop';
 export * from './commonAlerts';
+export * from './commonRates';
+export * from './commonCanvas';
 
 

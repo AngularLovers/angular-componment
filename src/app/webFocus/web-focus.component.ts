@@ -1,11 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Logger } from "service";
-import {CommonButtonComponent,CommonBadgeComponent,CommonAlertComponent, CommonCanvasComponent,CommonRateComponent,AlertModel } from "common";
+import {
+  CommonButtonComponent,
+  CommonBadgeComponent,
+  CommonAlertComponent,
+  CommonCanvasComponent,
+  CommonRateComponent,
+  AlertModel
+} from "common";
 
 @Component({
   selector: 'web-focus',
   pipes: [],
-  directives: [CommonButtonComponent,CommonBadgeComponent,CommonAlertComponent,CommonRateComponent,CommonCanvasComponent],
+  directives: [CommonButtonComponent, CommonBadgeComponent, CommonAlertComponent, CommonRateComponent, CommonCanvasComponent],
   styles: [
     require('./web-focus.scss')
   ],
@@ -44,16 +51,17 @@ export class WebFocusComponent implements OnInit {
    * 执行操作
    * @param rate
    */
-  alertRate(rate){
+  alertRate(rate) {
     Logger.alert(rate);
   }
 
-  consoleRate(method){
-    alert(method);
+  /**
+   * 供子组件调用的方法
+   */
+  clickEvent() {
+    Logger.alert("...............");
   }
-clickEvent(data){
-  alert("click了，msg："+data)
-}
+
   ngOnInit() {
 
   }

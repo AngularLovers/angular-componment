@@ -3,7 +3,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
 @Component({
   selector: 'common-button',
   styles: [require('./common-button.scss')],
-  template: `<button type="button" (click)="onClick(msg)" [ngClass]="{'btn-radius': isRadius}" class="btn {{color}} {{size}}" ><i class="{{icon}}"></i>{{msg}}</button>`
+  template: `<button type="button" (click)="onClick(msg)" [ngClass]="{'btn-radius': isRadius}" class="btn {{color}} {{size}}" ><i class="glyphicon {{icon}}"></i>&nbsp;&nbsp;{{msg}}</button>`
 })
 export class CommonButtonComponent implements OnInit {
 
@@ -32,13 +32,18 @@ export class CommonButtonComponent implements OnInit {
       this.msg = "确定";
     }
   }
-onClick(agreed: string){
-   this.clickEvent.emit(agreed);
-}
-  ngOnInit() {
-    // this.clickEvent.emit(1);
+
+  /**
+   * 调用父组件的方法
+   * @param agreed
+   */
+  onClick(agreed: string) {
+    this.clickEvent.emit(agreed);
   }
 
+  ngOnInit() {
+
+  }
 
   ngAfterViewInit() {
     if (!this.isClickAble) {

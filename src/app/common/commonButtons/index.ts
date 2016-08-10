@@ -11,11 +11,11 @@ export * from './common-button.component';
  *   isRadius 是否是圆角
  *
  *  父组件中定义些方法然后供子组件调用
- *  clickEvent(data){
+ *  clickEvent(){
  *   // todo
  *  }
  *
  *   使用
- *   <common-button (clickEvent)="clickEvent($event)" [msg]="'测试'" [color]="'btn-danger'" [isRadius]="true"></common-button>
+ *   <common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-danger'" [isRadius]="true"></common-button>
  *
  * */

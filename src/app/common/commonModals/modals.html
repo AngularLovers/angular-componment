@@ -1,30 +1,19 @@
-<button class="btn btn-primary" (click)="lgModal.show()">{{title}}</button>
+<button type="button" class="btn btn-{{color}}" data-toggle="modal" data-target=".bs-example-modal-lg">{{btnName}}</button>
 
-<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-{{size}}">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title">{{title}}</h4>
-      </div>
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title">{{title}}</h4>
+    </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="名字">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="链接">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="图标">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="状态">
-          </div>
-          <button type="submit" class="btn btn-success">保存</button>
-        </form>
+        <!-- 这里可以放form表单 -->
+        <ng-content></ng-content>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-success">保存</button>
       </div>
     </div>
   </div>

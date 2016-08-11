@@ -1,20 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { MODAL_DIRECTIVES, BS_VIEW_PROVIDERS } from 'ng2-bootstrap/ng2-bootstrap';
+import { Input } from "@angular/core";
 
 @Component({
-  selector: 'common-modals',
-  directives: [MODAL_DIRECTIVES],
-  viewProviders: [BS_VIEW_PROVIDERS],
+  selector: 'common-modal',
   template: require('./modals.html'),
   styles: [require('./modal.scss')],
 })
 
 export class CommonModalComponent implements OnInit {
 
-  title:string;
+  @Input() btnName:string; //按钮名字
+  @Input() color:string; // 颜色
+  @Input() title:string; //标题
+  @Input() size:string; // 大小
 
   ngOnInit() {
-    this.title = "修改菜单";
+
   }
 
 }

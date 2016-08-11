@@ -4,13 +4,15 @@ import { Logger } from "service";
 @Component({
   selector: 'common-radio',
   styles: [require('./common-radio.scss')],
-  template: `<button *ngFor="let item of radios;let i = index"  [ngClass]="{'active': isActive==i}" (click)="setActive(i)">{{item.name}}</button> {{value}}`
+  template: `<button *ngFor="let item of radios;let i = index" [disabled]="!item.isClickAble" 
+             [ngClass]="{'active': isActive==i,'disabledButton':!item.isClickAble }" 
+             (click)="setActive(i)">{{item.name}}</button> {{value}}`
 })
 export class CommonRadioComponent implements OnInit {
 
   @Input() radios: any; //颜色
   isActive: number = 0;
-  value:string; //当前选中的value
+  value: string; //当前选中的value
 
   constructor() {
 
@@ -23,12 +25,11 @@ export class CommonRadioComponent implements OnInit {
 
   /**
    * 当前选中按钮
-   * @param id
+   * @param i
    */
-  setActive(id) {
-    this.isActive = id;
-    this.value = this.radios[id].name;
+  setActive(i) {
+    this.isActive = i;
+    this.value = this.radios[i].name;
   }
-
 
 }

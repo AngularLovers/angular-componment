@@ -37,19 +37,25 @@ export class WebTestComponent implements OnInit {
   constructor() {
     this.radios = [
       {
-        "name": "北京"
+        "name": "北京",
+        "isClickAble":true
       },
       {
-        "name": "上海"
+        "name": "上海",
+        "isClickAble":false
+
       },
       {
-        "name": "杭州"
+        "name": "杭州",
+        "isClickAble":true
       },
       {
-        "name": "深圳"
+        "name": "深圳",
+        "isClickAble":true
       },
       {
-        "name": "苏州"
+        "name": "苏州",
+        "isClickAble":false
       }
     ];
     this.alerts = [

@@ -29,3 +29,11 @@ span,button{
 .active{
   background-color: #eee;
 }
+
+.disabledButton{
+  background-color: lightgray;
+  &:hover{
+    background-color: lightgray;
+    cursor: not-allowed;
+  }
+}

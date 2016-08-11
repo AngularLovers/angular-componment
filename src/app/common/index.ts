@@ -12,5 +12,6 @@ export * from './commonCanvas';
 export * from './commonBadges';
 export * from './commonButtons';
 export * from './commonTags';
+export * from './commonInputs';
 
 

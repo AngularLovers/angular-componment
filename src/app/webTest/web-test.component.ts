@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Logger } from "service";
 import {
+  CommonRadioComponent,
   CommonInputComponent,
   CommonTagComponent,
   CommonButtonComponent,
@@ -14,7 +15,7 @@ import {
 @Component({
   selector: 'web-test',
   pipes: [],
-  directives: [CommonInputComponent,CommonTagComponent,CommonButtonComponent, CommonBadgeComponent, CommonAlertComponent, CommonRateComponent, CommonCanvasComponent],
+  directives: [CommonRadioComponent,CommonInputComponent, CommonTagComponent, CommonButtonComponent, CommonBadgeComponent, CommonAlertComponent, CommonRateComponent, CommonCanvasComponent],
   styles: [
     require('./web-test.scss')
   ],
@@ -23,6 +24,7 @@ import {
 export class WebTestComponent implements OnInit {
   // 要传递的消息
   alerts: Array<AlertModel> = [];
+  radios: Array<Object> = [];
 
 
   /**
@@ -33,6 +35,28 @@ export class WebTestComponent implements OnInit {
   isReadOnly: boolean = false;
 
   constructor() {
+    this.radios = [
+      {
+        "id":1,
+        "name": "北京"
+      },
+      {
+        "id":2,
+        "name": "上海"
+      },
+      {
+        "id":3,
+        "name": "杭州"
+      },
+      {
+        "id":4,
+        "name": "深圳"
+      },
+      {
+        "id":5,
+        "name": "苏州"
+      }
+    ];
     this.alerts = [
       {
         type: 'info',

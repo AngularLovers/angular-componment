@@ -1,56 +1,61 @@
-<div>
-  <h1>提示组件(倒计时自动消失)</h1>
-  <common-alert [alerts]="alerts"></common-alert>
-</div>
+<!--<div>-->
+  <!--<h1>提示组件(倒计时自动消失)</h1>-->
+  <!--<common-alert [alerts]="alerts"></common-alert>-->
+<!--</div>-->
+
+<!--<hr>-->
+<!--<div>-->
+  <!--<h1>评分组件</h1>-->
+  <!--<common-rate [max]="max" [rate]="rate" [isReadonly]="isReadOnly" (submitRate)="alertRate($event)"></common-rate>-->
+<!--</div>-->
+
+<!--<hr>-->
+
+<!--<div>-->
+  <!--<h1>徽章</h1>-->
+  <!--<common-badge [count]="5" [size]="'mid'" [badgeColor]="'success'"></common-badge>-->
+  <!--<common-badge [count]="13" [size]="'mid'" [badgeColor]="'info'"></common-badge>-->
+  <!--<common-badge [count]="15" [size]="'mid'" [badgeColor]="'default'"></common-badge>-->
+  <!--<common-badge [count]="23" [size]="'mid'" [badgeColor]="'warning'"></common-badge>-->
+  <!--<common-badge [count]="32" [size]="'mid'" [badgeColor]="'primary'"></common-badge>-->
+  <!--<common-badge [count]="12" [size]="'mid'" [badgeColor]="'danger'"></common-badge>-->
+<!--</div>-->
+
+
+<!--<hr>-->
+<!--<div>-->
+  <!--<h1>按钮组件</h1>-->
+  <!--<common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-danger'"  [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>-->
+  <!--<common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-info'"    [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>-->
+  <!--<common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-success'" [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>-->
+  <!--<common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-primary'" [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>-->
+  <!--<common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-default'" [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>-->
+  <!--<common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-warning'" [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>-->
+<!--</div>-->
+
+
+<!--<hr>-->
+<!--<div>-->
+  <!--<h1>标签组件</h1>-->
+  <!--<common-tag [color]="'success'" [size]="'mid'" [msg]="'angular'" ></common-tag>-->
+  <!--<common-tag [color]="'info'"    [size]="'mid'" [msg]="'angular'" ></common-tag>-->
+  <!--<common-tag [color]="'primary'" [size]="'mid'" [msg]="'angular'" ></common-tag>-->
+  <!--<common-tag [color]="'default'" [size]="'mid'" [msg]="'angular'" ></common-tag>-->
+  <!--<common-tag [color]="'danger'"  [size]="'mid'" [msg]="'angular'" ></common-tag>-->
+  <!--<common-tag [color]="'warning'" [size]="'mid'" [msg]="'angular'" ></common-tag>-->
+<!--</div>-->
+
+<!--<div class="row">-->
+  <!--<div class="col-md-3">-->
+    <!--<h1>标签组件</h1>-->
+    <!--<common-input [inputType]="'text'" [info]="'请输入用户名'" [label]="'用户名'" [isRound]="true" ></common-input>-->
+    <!--<common-input [inputType]="'password'" [info]="'请输入密码'" [label]="'密码'" [isRound]="true" ></common-input>-->
+    <!--<common-input [inputType]="'checkbox'" ></common-input>-->
+  <!--</div>-->
+<!--</div>-->
 
 <hr>
 <div>
-  <h1>评分组件</h1>
-  <common-rate [max]="max" [rate]="rate" [isReadonly]="isReadOnly" (submitRate)="alertRate($event)"></common-rate>
+  <h1>单选按钮</h1>
+  <common-radio [radios]="radios" ></common-radio>
 </div>
-
-<hr>
-
-<div>
-  <h1>徽章</h1>
-  <common-badge [count]="5" [size]="'mid'" [badgeColor]="'success'"></common-badge>
-  <common-badge [count]="13" [size]="'mid'" [badgeColor]="'info'"></common-badge>
-  <common-badge [count]="15" [size]="'mid'" [badgeColor]="'default'"></common-badge>
-  <common-badge [count]="23" [size]="'mid'" [badgeColor]="'warning'"></common-badge>
-  <common-badge [count]="32" [size]="'mid'" [badgeColor]="'primary'"></common-badge>
-  <common-badge [count]="12" [size]="'mid'" [badgeColor]="'danger'"></common-badge>
-</div>
-
-
-<hr>
-<div>
-  <h1>按钮组件</h1>
-  <common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-danger'"  [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>
-  <common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-info'"    [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>
-  <common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-success'" [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>
-  <common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-primary'" [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>
-  <common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-default'" [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>
-  <common-button (clickEvent)="clickEvent()" [msg]="'测试'" [color]="'btn-warning'" [icon]="'glyphicon-apple'"  [isRadius]="true"></common-button>
-</div>
-
-
-<hr>
-<div>
-  <h1>标签组件</h1>
-  <common-tag [color]="'success'" [size]="'mid'" [msg]="'angular'" ></common-tag>
-  <common-tag [color]="'info'"    [size]="'mid'" [msg]="'angular'" ></common-tag>
-  <common-tag [color]="'primary'" [size]="'mid'" [msg]="'angular'" ></common-tag>
-  <common-tag [color]="'default'" [size]="'mid'" [msg]="'angular'" ></common-tag>
-  <common-tag [color]="'danger'"  [size]="'mid'" [msg]="'angular'" ></common-tag>
-  <common-tag [color]="'warning'" [size]="'mid'" [msg]="'angular'" ></common-tag>
-</div>
-
-<div class="row">
-  <div class="col-md-3">
-    <h1>标签组件</h1>
-    <common-input [inputType]="'text'" [info]="'请输入用户名'" [label]="'用户名'" [isRound]="true" ></common-input>
-    <common-input [inputType]="'password'" [info]="'请输入密码'" [label]="'密码'" [isRound]="true" ></common-input>
-    <common-input [inputType]="'checkbox'" ></common-input>
-  </div>
-</div>
-

@@ -13,5 +13,6 @@ export * from './commonBadges';
 export * from './commonButtons';
 export * from './commonTags';
 export * from './commonInputs';
+export * from './commonRadios';
 
 

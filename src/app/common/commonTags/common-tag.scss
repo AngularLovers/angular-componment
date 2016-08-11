@@ -1,0 +1,47 @@
+$tag-primary: darken(#428bca, 6.5%);
+$tag-success: #5cb85c;
+$tag-info: #5bc0de;
+$tag-warning: #f0ad4e;
+$tag-danger: #d9534f;
+$tag-default: gray;
+
+$tag-lg: 20px;
+$tag-mid: 15px;
+$tag-sm: 10px;
+
+.info {
+  background-color: $tag-info;
+}
+
+.warning {
+  background-color: $tag-warning;
+}
+
+.success {
+  background-color: $tag-success;
+}
+
+.default {
+  background-color: $tag-default;
+}
+
+.primary {
+  background-color: $tag-primary;
+}
+
+.danger {
+  background-color: $tag-danger;
+}
+
+.lg {
+  font-size: $tag-lg;
+}
+
+.mid {
+  font-size: $tag-mid;
+}
+
+.sm {
+  font-size: $tag-sm;
+}
+

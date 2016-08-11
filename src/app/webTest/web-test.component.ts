@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Logger } from "service";
 import {
+  CommonTagComponent,
   CommonButtonComponent,
   CommonBadgeComponent,
   CommonAlertComponent,
@@ -12,7 +13,7 @@ import {
 @Component({
   selector: 'web-test',
   pipes: [],
-  directives: [CommonButtonComponent, CommonBadgeComponent, CommonAlertComponent, CommonRateComponent, CommonCanvasComponent],
+  directives: [CommonTagComponent,CommonButtonComponent, CommonBadgeComponent, CommonAlertComponent, CommonRateComponent, CommonCanvasComponent],
   styles: [
     require('./web-test.scss')
   ],

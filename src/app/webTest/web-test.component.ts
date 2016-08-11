@@ -37,23 +37,18 @@ export class WebTestComponent implements OnInit {
   constructor() {
     this.radios = [
       {
-        "id":1,
         "name": "北京"
       },
       {
-        "id":2,
         "name": "上海"
       },
       {
-        "id":3,
         "name": "杭州"
       },
       {
-        "id":4,
         "name": "深圳"
       },
       {
-        "id":5,
         "name": "苏州"
       }
     ];

@@ -1,16 +1,15 @@
 .active{
-  border-color: deepskyblue;
-  color: deepskyblue;
+  border-color: cornflowerblue;
+  color: cornflowerblue;
 }
 
 span,button{
   margin-left: 0;
-  padding-left: 0;
   background:none;
   color: #555;
   padding: 3px 15px 3px 15px;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid cornflowerblue;
   border-right:none;
   outline: none;
   &:nth-child(1){
@@ -20,7 +19,7 @@ span,button{
   &:nth-last-child(1){
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    border-right:1px solid #ccc;
+    border-right:1px solid cornflowerblue;
   }
   &:hover{
     background-color: #eee;

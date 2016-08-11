@@ -17,6 +17,7 @@ export class CommonRadioComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.isActive = 0;
     this.value = this.radios[0].name;
   }
 

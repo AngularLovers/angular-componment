@@ -1,19 +1,14 @@
-<button type="button" class="btn btn-{{color}}" data-toggle="modal" data-target=".bs-example-modal-lg">{{btnName}}</button>
+<button type="button" class="btn btn-{{color}}" data-toggle="modal" data-target=".{{key}}">{{btnName}}</button>
 
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="{{key}} modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-{{size}}">
     <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title">{{title}}</h4>
     </div>
       <div class="modal-body">
         <!-- 这里可以放form表单 -->
         <ng-content></ng-content>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-        <button type="button" class="btn btn-success">保存</button>
       </div>
     </div>
   </div>

@@ -1,5 +1,4 @@
 export * from './common-alert.component';
-export * from './common-alert.model';
 /**
 1.参数：
 alerts: Array<AlertModel> = [];

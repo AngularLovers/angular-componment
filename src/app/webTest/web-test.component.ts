@@ -10,7 +10,6 @@ import {
   CommonAlertComponent,
   CommonCanvasComponent,
   CommonRateComponent,
-  AlertModel
 } from "common";
 
 @Component({
@@ -24,7 +23,6 @@ import {
 })
 export class WebTestComponent implements OnInit {
   // 要传递的消息
-  alerts: Array<AlertModel> = [];
   radios: Array<Object> = [];
 
 
@@ -59,32 +57,6 @@ export class WebTestComponent implements OnInit {
         "isClickAble":false
       }
     ];
-    this.alerts = [
-      {
-        type: 'info',
-        msg: '这是一个提示消息.',
-        dismissTime: 30000,
-        closable: true
-      },
-      {
-        type: 'warning',
-        msg: '这是一个提示警告的消息.',
-        dismissTime: 30000,
-        closable: true
-      },
-      {
-        type: 'danger',
-        msg: '这是一个提示危险的消息.',
-        dismissTime: 30000,
-        closable: true
-      },
-      {
-        type: 'success',
-        msg: '这是一个提示成功的消息.',
-        dismissTime: 30000,
-        closable: true
-      }
-    ]
   }
 
   /**

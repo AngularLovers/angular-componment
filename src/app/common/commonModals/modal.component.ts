@@ -13,6 +13,7 @@ export class CommonModalComponent implements OnInit {
   @Input() color:string; // 颜色
   @Input() title:string; //标题
   @Input() size:string; // 大小
+  @Input() key:string; // 主键
 
   ngOnInit() {
 

@@ -1,7 +1,13 @@
-<!--<div>-->
-  <!--<h1>提示组件(倒计时自动消失)</h1>-->
-  <!--<common-alert [alerts]="alerts"></common-alert>-->
-<!--</div>-->
+<!--<common-modal [key]="'alert'" [btnName]="'Alert'" [size]="'lg'" [color]="'default'" [title]="'提示组件(倒计时自动消失)'">-->
+  <!--<div>-->
+    <!--<common-alert [dismissTime]="10000" [type]="'info'"     [msg]="'这是一个提示消息'"></common-alert>-->
+    <!--<common-alert [dismissTime]="10000" [type]="'success'"  [msg]="'这是一个提示成功的消息'"></common-alert>-->
+    <!--<common-alert [dismissTime]="10000" [type]="'warning'"  [msg]="'这是一个提示警告的消息'"></common-alert>-->
+    <!--<common-alert [dismissTime]="10000" [type]="'danger'"   [msg]="'这是一个提示危险的消息'"></common-alert>-->
+  <!--</div>-->
+<!--</common-modal>-->
+
+
 
 <!--<hr>-->
 <!--<div>-->
@@ -60,6 +66,6 @@
   <common-radio [radios]="radios" ></common-radio>
 </div>
 
-  <common-modal [btnName]="'查看'" [size]="'lg'" [color]="'default'" [title]="'测试组件'">
+  <common-modal [key]="'radio-test'" [btnName]="'查看'" [size]="'lg'" [color]="'default'" [title]="'测试组件'">
       <common-radio [radios]="radios" ></common-radio>
   </common-modal>

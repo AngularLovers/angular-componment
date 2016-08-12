@@ -1,6 +1,5 @@
-import { Component,Input } from '@angular/core';
-import { AlertComponent } from 'ng2-bootstrap/ng2-bootstrap';
-import { AlertModel } from "./common-alert.model";
+import { Component, Input, OnInit } from "@angular/core";
+import { AlertComponent } from "ng2-bootstrap/ng2-bootstrap";
 
 let template = require('./common-alert.html');
 
@@ -9,8 +8,22 @@ let template = require('./common-alert.html');
   template: template,
   directives: [AlertComponent]
 })
-export class CommonAlertComponent {
-  @Input() alerts: Array<AlertModel>;
+export class CommonAlertComponent implements OnInit {
+  @Input() dismissTime: number;
+  @Input() type: string;
+  @Input() msg: string;
+  alerts: Array<Object>;
+
+  ngOnInit() {
+    this.alerts = [
+      {
+        "msg": this.msg,
+        "type": this.type,
+        "dismissTime": this.dismissTime
+      }
+    ];
+    console.log(JSON.stringify(this.alerts));
+  }
 
   /**
    * 关闭提示

@@ -1,4 +1,4 @@
-![[blog](http://blog.xiaomo.info)](http://static.xiaomo.info/images/blog.png)
+![[blog](http://static.xiaomo.info/images/blog.png)
 
 # 一、我的博客
 虽然不知道为什么，但是还是要先给自己的博客打一波广告吧。上面记载着我在项目开发的过程中积累的点滴，如果有什么建议也可以在上面给我[留言](http://blog.xiaomo.info/about/)。

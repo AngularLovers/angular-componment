@@ -22,7 +22,6 @@ export class CommonAlertComponent implements OnInit {
         "dismissTime": this.dismissTime
       }
     ];
-    console.log(JSON.stringify(this.alerts));
   }
 
   /**

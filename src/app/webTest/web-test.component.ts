@@ -10,12 +10,13 @@ import {
   CommonAlertComponent,
   CommonCanvasComponent,
   CommonRateComponent,
+  CommonSliderComponent
 } from "common";
 
 @Component({
   selector: 'web-test',
   pipes: [],
-  directives: [CommonModalComponent,CommonRadioComponent,CommonInputComponent, CommonTagComponent, CommonButtonComponent, CommonBadgeComponent, CommonAlertComponent, CommonRateComponent, CommonCanvasComponent],
+  directives: [CommonSliderComponent,CommonModalComponent,CommonRadioComponent,CommonInputComponent, CommonTagComponent, CommonButtonComponent, CommonBadgeComponent, CommonAlertComponent, CommonRateComponent, CommonCanvasComponent],
   styles: [
     require('./web-test.scss')
   ],

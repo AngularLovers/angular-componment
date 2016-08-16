@@ -17,5 +17,6 @@ export * from './commonRadios';
 export * from './commonModals';
 export * from './commonSliders';
 export * from './commonBaidu';
+export * from './commonEditor';
 
 

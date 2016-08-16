@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { CKEditor } from 'ng2-ckeditor';
-import { BaCard } from "./../../baCard/index";
 
 import './ckeditor.loader.ts';
 
 @Component({
-  selector: 'ckeditor',
-  directives: [CKEditor, BaCard],
-  template: require('./ckeditor.html')
+  selector: 'common-ckeditor',
+  directives: [CKEditor],
+  template: require('./common-ckeditor.html')
 })
 
-export class Ckeditor {
+export class CommonCkeditorComponent {
   private ckeditorContent;
   private config;
 

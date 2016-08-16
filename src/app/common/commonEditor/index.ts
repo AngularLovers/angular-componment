@@ -1,1 +1,1 @@
-export * from './ckeditor.component';
+export * from './common-ckeditor.component';

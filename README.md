@@ -39,13 +39,15 @@
 # 六、鸣谢
 1. @Alice([AlicePrincess](https://github.com/AlicePrincess))
 一个很聪明伶俐、多才多艺的萌妹子，在项目过程中遇到的很多问题都是她帮我解决掉的。
-2. @[AngularJS中文社区](http://angular.cn)(278252889)
+2. @龙猫 [龙猫](http://zxcool.cn)
+大长腿欧巴，P得一手好图，做得UI叼炸天。一个好的网站没有一个好的UI真是个灾难，没有他的帮忙我的网站就进行不下去。
+3. @[AngularJS中文社区](http://angular.cn)(278252889)
 很多技术大牛聚集的地方，成员友好。
-3. @[stackoverflow](http://stackoverflow.com/)
+4. @[stackoverflow](http://stackoverflow.com/)
 最优秀的技术问答社区，没有之一！善用此工具，事半功倍。
-4. @[angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter)
+5. @[angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter)
 目前最后的项目seed，一个好的开发环境能够节省很多时间。多亏有了@angularClass，让我可以集中精力开发项目。
-5. @其他所有对我有帮助的人和事情。
+6. @其他所有对我有帮助的人和事情。
 要感谢的人很多，一一列举相信各位看官也没什么兴趣。总之很感谢，能够在大家的帮助下不断进步。
 
 # 七、关于我

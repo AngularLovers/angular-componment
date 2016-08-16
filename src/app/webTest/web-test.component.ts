@@ -18,7 +18,19 @@ import {
 @Component({
   selector: 'web-test',
   pipes: [],
-  directives: [CommonCkeditorComponent,CommonBaiduComponent,CommonSliderComponent,CommonModalComponent,CommonRadioComponent,CommonInputComponent, CommonTagComponent, CommonButtonComponent, CommonBadgeComponent, CommonAlertComponent, CommonRateComponent, CommonCanvasComponent],
+  directives: [
+    CommonCkeditorComponent,
+    CommonBaiduComponent,
+    CommonSliderComponent,
+    CommonModalComponent,
+    CommonRadioComponent,
+    CommonInputComponent,
+    CommonTagComponent,
+    CommonButtonComponent,
+    CommonBadgeComponent,
+    CommonAlertComponent,
+    CommonRateComponent,
+    CommonCanvasComponent],
   styles: [
     require('./web-test.scss')
   ],

@@ -1,3 +1,5 @@
-<div *ngFor="let item of projectItems">
-  <project-item [projectItem]="item" ></project-item>
-</div>
+<ul *ngFor="let item of projectItems">
+  <li>
+    <project-item [projectItem]="item"></project-item>
+  </li>
+</ul>

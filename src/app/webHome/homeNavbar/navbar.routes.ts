@@ -1,4 +1,4 @@
-import { RouterConfig, provideRouter } from "@angular/router";
+import { RouterConfig } from "@angular/router";
 
 import { WebAboutComponent } from "./../../webAbout/web-about.component";
 import { WebHomeComponent } from "../web-home.component";

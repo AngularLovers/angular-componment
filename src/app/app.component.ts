@@ -2,7 +2,7 @@
  * Angular 2 decorators and services
  */
 import { Component, OnInit, ViewEncapsulation, ViewContainerRef } from "@angular/core";
-import { WebNavbarComponent } from "./webHome/homeHavbar";
+import { WebNavbarComponent } from "./webHome/homeNavbar";
 import { WebFooterComponent, WebHeaderComponent, BaBackTop } from "common";
 import { AppState } from "./app.service";
 import { BaThemePreloader, BaThemeSpinner, Logger } from "services";

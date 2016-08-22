@@ -1,4 +1,3 @@
-// export * from './baImageLoader';
-export * from './baThemePreloader';
-export * from './baThemeSpinner';
+export * from './baThemeSpinner.service';
+export * from './baThemePreloader.service';
 export * from './logger.service';

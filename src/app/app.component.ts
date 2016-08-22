@@ -5,7 +5,7 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { WebNavbarComponent } from "./webHome/homeNavbar";
 import { WebFooterComponent, WebHeaderComponent, BaBackTop } from "common";
 import { AppState } from "./app.service";
-import { PreLoaderService, Logger } from "services";
+import { PreLoaderService } from "services";
 
 /*
  * App Component
@@ -15,7 +15,7 @@ import { PreLoaderService, Logger } from "services";
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   directives: [WebHeaderComponent, WebNavbarComponent, WebFooterComponent,BaBackTop],
-  providers: [PreLoaderService,Logger],
+  providers: [PreLoaderService],
   styles:[require('./app.scss'),require('normalize.css')],
   template: require('./app.html')
 })

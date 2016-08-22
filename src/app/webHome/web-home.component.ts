@@ -8,7 +8,7 @@ import { LoginComponent } from "./homeLogin";
 @Component({
   selector: 'web-home',
   providers: [],
-  directives: [WebBannerComponent,WebIntroduceComponent,LoginComponent],
+  directives: [WebBannerComponent,WebIntroduceComponent],
   pipes: [],
   styles: [require('./web-home.scss')],
   template: require('./web-home.html')

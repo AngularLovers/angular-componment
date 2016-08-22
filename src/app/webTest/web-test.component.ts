@@ -9,9 +9,7 @@ import {
   CommonTagComponent,
   CommonButtonComponent,
   CommonBadgeComponent,
-  CommonAlertComponent,
   CommonCanvasComponent,
-  CommonRateComponent,
   CommonSliderComponent
 } from "common";
 
@@ -28,8 +26,6 @@ import {
     CommonTagComponent,
     CommonButtonComponent,
     CommonBadgeComponent,
-    CommonAlertComponent,
-    CommonRateComponent,
     CommonCanvasComponent],
   styles: [
     require('./web-test.scss')

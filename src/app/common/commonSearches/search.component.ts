@@ -4,7 +4,6 @@ let template = require('./commonSearch.html');
 let searchStyle = require('./commonSearch.scss');
 
 @Component({
-  moduleId: module.id,
   selector: 'common-search',
   template:template,
   styles:[searchStyle]

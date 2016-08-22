@@ -1,20 +1,19 @@
 /*
  * Providers provided by Angular
  */
-import { bootstrap } from '@angular/platform-browser-dynamic';
 /*
 * Platform and Environment
 * our providers/directives/pipes
 */
-import { PLATFORM_PROVIDERS } from './platform/browser';
-import { ENV_PROVIDERS, decorateComponentRef } from './platform/environment';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { decorateComponentRef } from './platform/environment';
 
 
 /*
 * App Component
 * our top level component that holds all of our components
 */
-import { App, APP_PROVIDERS } from './app';
+import { AppModule } from "./app/app.module";
 
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
@@ -22,14 +21,10 @@ import { App, APP_PROVIDERS } from './app';
  */
 export function main(initialHmrState?: any): Promise<any> {
 
-  return bootstrap(App, [
-    // To add more vendor providers please look in the platform/ folder
-    ...PLATFORM_PROVIDERS,
-    ...ENV_PROVIDERS,
-    ...APP_PROVIDERS,
-  ])
-  .then(decorateComponentRef)
-  .catch(err => console.error(err));
+  return platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .then(decorateComponentRef)
+    .catch(err => console.error(err));
 
 }
 

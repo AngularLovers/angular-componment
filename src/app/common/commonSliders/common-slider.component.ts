@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from "@angular/core";
 
 @Component({
-  moduleId: module.id,
   selector: 'common-slider',
   styles: [require('./common-slider.scss')],
   template: require('./common-slider.html')

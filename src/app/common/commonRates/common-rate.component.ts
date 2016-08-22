@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import { RatingComponent } from 'ng2-bootstrap/ng2-bootstrap';
 import { Input } from "@angular/core";
 import { Output } from "@angular/core";
 import { EventEmitter } from "@angular/core";
@@ -10,7 +9,6 @@ let template = require('./common-rate.html');
 
 @Component({
   selector: 'common-rate',
-  directives: [RatingComponent],
   template: template
 })
 export class CommonRateComponent {

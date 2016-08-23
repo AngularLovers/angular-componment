@@ -13,6 +13,12 @@ import { WebHeaderComponent } from "./common/webHeader/web-header.component";
 import { WebNavbarComponent } from "./webHome/homeNavbar/home-navbar.component";
 import { WebFooterComponent } from "./common/webFooter/web-footer.component";
 import { BaBackTop } from "./common/commonBackTop/baBackTop.component";
+import { WebHomeComponent } from "./webHome/web-home.component";
+import { WebTestComponent } from "./webTest/web-test.component";
+import { WebFocusComponent } from "./webFocus/web-focus.component";
+import { WebProjectComponent } from "./webProject/web-project.component";
+import { WebGoodBlogComponent } from "./webGoodBlog/web-goodBlog.component";
+import { WebAboutComponent } from "./webAbout/web-about.component";
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -30,7 +36,17 @@ const APP_PROVIDERS = [
 @NgModule({
   bootstrap: [App],
   declarations: [
-    App, WebHeaderComponent, WebNavbarComponent, WebFooterComponent, BaBackTop
+    App,
+    WebHeaderComponent,
+    WebNavbarComponent,
+    WebFooterComponent,
+    BaBackTop,
+    WebHomeComponent,
+    WebTestComponent,
+    WebFocusComponent,
+    WebGoodBlogComponent,
+    WebProjectComponent,
+    WebAboutComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,

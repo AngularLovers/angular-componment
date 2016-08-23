@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 // import { ActivatedRoute } from '@angular/router';
 import { GoodBlogItemComponent } from "./goodBlogItem/goodBlog-item.component";
-import { GoodBlogService } from "./web-goodBlog.service";
+import { GoodBlogService } from "./web-technology.service";
 
 @Component({
   selector: 'web-goodBlog',
   directives: [GoodBlogItemComponent],
   providers: [GoodBlogService],
   pipes: [],
-  styles: [require('./web-goodBlog.scss')],
-  template: require('./web-goodBlog.html')
+  styles: [require('./web-technology.scss')],
+  template: require('./web-technology.html')
 })
-export class WebGoodBlogComponent implements OnInit {
+export class WebTechnologyComponent implements OnInit {
 
   goodBlogItems;
 

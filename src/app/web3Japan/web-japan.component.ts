@@ -6,11 +6,11 @@ import { Logger } from "service";
   pipes: [],
   directives: [],
   styles: [
-    require('./web-focus.scss')
+    require('./web-janpan.scss')
   ],
-  template: require('./web-focus.html')
+  template: require('./web-japan.html')
 })
-export class WebFocusComponent implements OnInit {
+export class WebJapanComponent implements OnInit {
 
   ngOnInit() {
 

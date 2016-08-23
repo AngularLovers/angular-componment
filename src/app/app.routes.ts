@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { navbarRouters } from "./webHome/homeNavbar/navbar.routes";
+import { navbarRouters } from "./web1Home/homeNavbar/navbar.routes";
 
 export const ROUTES: Routes = [
     // ...LoginRoutes, // 登录

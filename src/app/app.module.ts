@@ -9,16 +9,15 @@ import { ROUTES } from "./app.routes";
 import { App } from "./app.component";
 import { APP_RESOLVER_PROVIDERS } from "./app.resolver";
 import { AppState } from "./app.service";
-import { WebHeaderComponent } from "./common/webHeader/web-header.component";
-import { WebNavbarComponent } from "./webHome/homeNavbar/home-navbar.component";
-import { WebFooterComponent } from "./common/webFooter/web-footer.component";
-import { BaBackTop } from "./common/commonBackTop/baBackTop.component";
-import { WebHomeComponent } from "./webHome/web-home.component";
-import { WebTestComponent } from "./webTest/web-test.component";
-import { WebFocusComponent } from "./webFocus/web-focus.component";
-import { WebProjectComponent } from "./webProject/web-project.component";
-import { WebGoodBlogComponent } from "./webGoodBlog/web-goodBlog.component";
-import { WebAboutComponent } from "./webAbout/web-about.component";
+import { WebHeaderComponent,WebFooterComponent ,BaBackTop} from "common";
+import { WebHomeComponent } from "./web1Home/web-home.component";
+import { WebTestComponent } from "./web7Test/web-test.component";
+import { WebTechnologyComponent } from "./web2Technology/web-technology.component";
+import { WebProjectComponent } from "./web5Project/web-project.component";
+import { WebAboutComponent } from "./web6About/web-about.component";
+import { WebJapanComponent } from "./web3Japan/web-japan.component";
+import { WebNavbarComponent } from "./web1Home/homeNavbar/home-navbar.component";
+import { WebLoveComponent } from "./web4Love/web-love.component";
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -38,15 +37,16 @@ const APP_PROVIDERS = [
   declarations: [
     App,
     WebHeaderComponent,
-    WebNavbarComponent,
     WebFooterComponent,
+    WebNavbarComponent,
     BaBackTop,
     WebHomeComponent,
     WebTestComponent,
-    WebFocusComponent,
-    WebGoodBlogComponent,
+    WebJapanComponent,
+    WebTechnologyComponent,
     WebProjectComponent,
-    WebAboutComponent
+    WebAboutComponent,
+    WebLoveComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,

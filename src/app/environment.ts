@@ -45,6 +45,6 @@ if ('production' === ENV) {
 
 export const decorateModuleRef = decorateModuleRef;
 
-export const ENVPROVIDERS = [
+export const ENV_PROVIDERS = [
   ...PROVIDERS
 ];

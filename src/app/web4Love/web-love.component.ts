@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Logger } from "service";
+import { Logger } from "services";
 
 @Component({
   selector: 'web-works',

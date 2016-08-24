@@ -14,6 +14,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 /*
  * Webpack Constants
@@ -141,6 +142,10 @@ module.exports = {
         test: /\.scss$/,
         loader: `raw!postcss!sass?outputStyle=expanded&includePaths[]=${helpers.root('src/styles')}/`
       },
+      {
+        test: /initial\.scss$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+      },
       /*
        * to string and css loader support for *.css files
        * Returns file content as string
@@ -187,7 +192,9 @@ module.exports = {
      * See: https://github.com/s-panferov/awesome-typescript-loader#forkchecker-boolean-defaultfalse
      */
     new ForkCheckerPlugin(),
-
+    new ExtractTextPlugin('initial.css',  {
+      allChunks: true
+    }),
     /*
      * Plugin: OccurenceOrderPlugin
      * Description: Varies the distribution of the ids to get the smallest id length

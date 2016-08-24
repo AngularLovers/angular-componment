@@ -6,6 +6,7 @@ import { WebNavbarComponent } from "./web1Home/homeNavbar";
 import { WebFooterComponent, WebHeaderComponent, BaBackTop } from "common";
 import { AppState } from "./app.service";
 import { PreLoaderService } from "services";
+import './app.loader';
 
 /*
  * App Component

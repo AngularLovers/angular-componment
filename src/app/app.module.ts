@@ -17,7 +17,6 @@ import { WebProjectComponent } from "./web5Project/web-project.component";
 import { WebAboutComponent } from "./web6About/web-about.component";
 import { WebJapanComponent } from "./web3Japan/web-japan.component";
 import { WebNavbarComponent } from "./web1Home/homeNavbar/home-navbar.component";
-import { WebLoveComponent } from "./web4Love/web-love.component";
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -36,17 +35,16 @@ const APP_PROVIDERS = [
   bootstrap: [App],
   declarations: [
     App,
+    BaBackTop,
     WebHeaderComponent,
     WebFooterComponent,
     WebNavbarComponent,
-    BaBackTop,
     WebHomeComponent,
     WebTestComponent,
     WebJapanComponent,
     WebTechnologyComponent,
     WebProjectComponent,
-    WebAboutComponent,
-    WebLoveComponent
+    WebAboutComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
@@ -70,15 +68,14 @@ export class AppModule {
   hmrOnDestroy(store) {
     var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
     // recreate elements
-    var state = this.appState.state;
-    store.state = state;
+    store.state = this.appState.state;
     store.disposeOldHosts = createNewHosts(cmpLocation);
     // remove styles
     removeNgStyles();
   }
   hmrAfterDestroy(store) {
     // display new elements
-    store.disposeOldHosts()
+    store.disposeOldHosts();
     delete store.disposeOldHosts;
   }
 }

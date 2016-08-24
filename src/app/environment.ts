@@ -9,8 +9,8 @@ let PROVIDERS = [
 ];
 
 // Angular debug tools in the dev console
-// https://github.com/angular/angular/blob/86405345b781a9dc2438c0fbe3e9409245647019/TOOLSJS.md
-let decorateModuleRef = function identity(value) { return value; };
+// https://github.com/angular/angular/blob/86405345b781a9dc2438c0fbe3e9409245647019/TOOLS_JS.md
+let _decorateModuleRef = function identity(value) { return value; };
 
 if ('production' === ENV) {
   // Production
@@ -24,14 +24,14 @@ if ('production' === ENV) {
 
 } else {
 
-  decorateModuleRef = (modRef: any) => {
+  _decorateModuleRef = (modRef: any) => {
     var appRef = modRef.injector.get(ApplicationRef);
     var cmpRef = appRef.components[0];
 
-    let ng = (<any>window).ng;
+    let _ng = (<any>window).ng;
     enableDebugTools(cmpRef);
-    (<any>window).ng.probe = ng.probe;
-    (<any>window).ng.coreTokens = ng.coreTokens;
+    (<any>window).ng.probe = _ng.probe;
+    (<any>window).ng.coreTokens = _ng.coreTokens;
     return modRef
   };
 
@@ -43,7 +43,7 @@ if ('production' === ENV) {
 
 }
 
-export const decorateModuleRef = decorateModuleRef;
+export const decorateModuleRef = _decorateModuleRef;
 
 export const ENV_PROVIDERS = [
   ...PROVIDERS

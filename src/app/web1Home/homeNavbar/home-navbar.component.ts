@@ -1,28 +1,26 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { RouterLinkActive } from '@angular/router';
-import { DropdownDirective } from 'common';
+import { Component, ChangeDetectionStrategy, OnInit } from "@angular/core";
+import { RouterLinkActive } from "@angular/router";
+import { HomeNavbarService } from "./home-navbar.service";
 
 @Component({
   selector: 'web-navbar',
-  providers: [],
-  directives: [DropdownDirective, RouterLinkActive],
+  providers: [HomeNavbarService],
+  directives: [ RouterLinkActive],
   pipes: [],
   styles: [require('./home-navbar.scss')],
   template: require('./home-navbar.html'),
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class WebNavbarComponent {
-  private showNavBar: boolean;
+export class WebNavbarComponent implements OnInit {
 
-  toggleNavBarState($event: Event) {
-    $event.stopPropagation();
-    this.showNavBar = !this.showNavBar;
+  menus;
+
+  constructor(public navbarService: HomeNavbarService) {
+
   }
 
-  hideNavBar($event: Event) {
-    /* tslint:disable */
-    $event && $event.stopPropagation();
-    /* tslint:enable */
-    this.showNavBar = false;
+  ngOnInit() {
+    this.menus = this.navbarService.getMenus();
   }
+
 }

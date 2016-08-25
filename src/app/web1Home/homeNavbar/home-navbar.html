@@ -14,12 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li routerLinkActive="active" ><a  [routerLink]="['home']" >首页 <span class="sr-only">(current)</span></a></li>
-        <li routerLinkActive="active" ><a  [routerLink]="['test']" >测试页</a></li>
-        <li routerLinkActive="active" ><a  [routerLink]="['nihongo']" >动漫</a></li>
-        <li routerLinkActive="active" ><a  [routerLink]="['technology']" >技术</a></li>
-        <li routerLinkActive="active" ><a  [routerLink]="['project']" >项目实例</a></li>
-        <li routerLinkActive="active" ><a  [routerLink]="['about']" >关于我</a></li>
+        <li routerLinkActive="active" *ngFor="let item of menus"><a  [routerLink]="[item.url]" >{{item.name}} </a></li>
         <li routerLinkActive="active" ><a  target="_blank" href="http://blog.xiaomo.info" >我的博客</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">

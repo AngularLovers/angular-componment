@@ -1,0 +1,26 @@
+[
+  {
+    "name": "首页",
+    "url": "home"
+  },
+  {
+    "name": "测试页",
+    "url": "test"
+  },
+  {
+    "name": "动漫",
+    "url": "nihongo"
+  },
+  {
+    "name": "技术",
+    "url": "technology"
+  },
+  {
+    "name": "项目实例",
+    "url": "project"
+  },
+  {
+    "name": "关于我",
+    "url": "about"
+  }
+]

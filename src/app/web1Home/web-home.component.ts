@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { WebBannerComponent } from './homeBanner';
 import { WebIntroduceComponent } from './homeIntroduce';
-import { LoginComponent } from "./homeLogin";
 
 
 @Component({

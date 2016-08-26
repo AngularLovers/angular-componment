@@ -101,16 +101,16 @@ module.exports = {
      * See: http://webpack.github.io/docs/configuration.html#module-preloaders-module-postloaders
      */
     preLoaders: [
-      // {
-      //   test: /\.ts$/,
-      //   loader: 'string-replace-loader',
-      //   query: {
-      //     search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
-      //     replace: '$1.import($3).then(mod => mod.__esModule ? mod.default : mod)',
-      //     flags: 'g'
-      //   },
-      //   include: [helpers.root('src')]
-      // },
+      {
+        test: /\.ts$/,
+        loader: 'string-replace-loader',
+        query: {
+          search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
+          replace: '$1.import($3).then(mod => mod.__esModule ? mod.default : mod)',
+          flags: 'g'
+        },
+        include: [helpers.root('src')]
+      },
     ],
 
     /*

@@ -46,7 +46,7 @@ module.exports = {
    *
    * See: http://webpack.github.io/docs/configuration.html#cache
    */
-   //cache: false,
+  //cache: false,
 
   /*
    * The entry point for the bundle
@@ -57,8 +57,8 @@ module.exports = {
   entry: {
 
     'polyfills': './src/polyfills.browser.ts',
-    'vendor':    './src/vendor.browser.ts',
-    'main':      './src/main.browser.ts'
+    'vendor': './src/vendor.browser.ts',
+    'main': './src/main.browser.ts'
 
   },
 
@@ -101,7 +101,16 @@ module.exports = {
      * See: http://webpack.github.io/docs/configuration.html#module-preloaders-module-postloaders
      */
     preLoaders: [
-
+      // {
+      //   test: /\.ts$/,
+      //   loader: 'string-replace-loader',
+      //   query: {
+      //     search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
+      //     replace: '$1.import($3).then(mod => mod.__esModule ? mod.default : mod)',
+      //     flags: 'g'
+      //   },
+      //   include: [helpers.root('src')]
+      // },
     ],
 
     /*
@@ -144,7 +153,7 @@ module.exports = {
       },
       {
         test: /initial\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        loader: ExtractTextPlugin.extract({fallbackLoader: 'style-loader', loader: 'css-loader!sass-loader'})
       },
       /*
        * to string and css loader support for *.css files
@@ -166,13 +175,22 @@ module.exports = {
         loader: 'raw-loader',
         exclude: [helpers.root('src/index.html')]
       },
-      { test: /\.woff(\?.*)?$/,  loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff' },
-      { test: /\.woff2(\?.*)?$/, loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff2' },
-      { test: /\.otf(\?.*)?$/,   loader: 'file?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=font/opentype' },
-      { test: /\.ttf(\?.*)?$/,   loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream' },
-      { test: /\.eot(\?.*)?$/,   loader: 'file?prefix=fonts/&name=[path][name].[ext]' },
-      { test: /\.svg(\?.*)?$/,   loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml' },
-      { test: /\.(png|jpg)$/,    loader: 'url?limit=8192' }
+      {
+        test: /\.woff(\?.*)?$/,
+        loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.woff2(\?.*)?$/,
+        loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff2'
+      },
+      {test: /\.otf(\?.*)?$/, loader: 'file?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=font/opentype'},
+      {
+        test: /\.ttf(\?.*)?$/,
+        loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream'
+      },
+      {test: /\.eot(\?.*)?$/, loader: 'file?prefix=fonts/&name=[path][name].[ext]'},
+      {test: /\.svg(\?.*)?$/, loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml'},
+      {test: /\.(png|jpg)$/, loader: 'url?limit=8192'}
 
     ]
 
@@ -192,18 +210,6 @@ module.exports = {
      * See: https://github.com/s-panferov/awesome-typescript-loader#forkchecker-boolean-defaultfalse
      */
     new ForkCheckerPlugin(),
-    new ExtractTextPlugin('initial.css',  {
-      allChunks: true
-    }),
-    /*
-     * Plugin: OccurenceOrderPlugin
-     * Description: Varies the distribution of the ids to get the smallest id length
-     * for often used ids.
-     *
-     * See: https://webpack.github.io/docs/list-of-plugins.html#occurrenceorderplugin
-     * See: https://github.com/webpack/docs/wiki/optimization#minimize
-     */
-    new webpack.optimize.OccurenceOrderPlugin(true),
 
     /*
      * Plugin: CommonsChunkPlugin
@@ -215,10 +221,6 @@ module.exports = {
      */
     new webpack.optimize.CommonsChunkPlugin({
       name: ['polyfills', 'vendor'].reverse()
-    }),
-
-    new WebpackNotifierPlugin({
-      title: '小莫的个人网站'
     }),
 
     /*
@@ -276,6 +278,11 @@ module.exports = {
       jQuery: 'jquery',
       $: 'jquery',
       jquery: 'jquery'
+    }),
+    new ExtractTextPlugin({filename: 'initial.css', disable: false, allChunks: true}),
+
+    new WebpackNotifierPlugin({
+      title: '小莫的个人网站'
     })
   ],
 

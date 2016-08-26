@@ -53,7 +53,11 @@ declare module "*"
 declare var ENV: string;
 declare var HMR: boolean;
 declare var jQuery: any;
+declare var System: SystemJS;
 
+interface SystemJS {
+  import: (path?: string) => Promise<any>;
+}
 
 /**
  * 全局环境
@@ -61,6 +65,8 @@ declare var jQuery: any;
 interface GlobalEnvironment {
   ENV;
   HMR;
+  SystemJS: SystemJS;
+  System: SystemJS;
 }
 
 /**

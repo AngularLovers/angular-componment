@@ -62,13 +62,13 @@ export class AppModule {
   hmrOnInit(store) {
     if (!store || !store.state) return;
     console.log('HMR store', store);
-    this.appState.state = store.state;
+    this.appState._state = store.state;
     delete store.state;
   }
   hmrOnDestroy(store) {
     var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
     // recreate elements
-    store.state = this.appState.state;
+    store.state = this.appState._state;
     store.disposeOldHosts = createNewHosts(cmpLocation);
     // remove styles
     removeNgStyles();

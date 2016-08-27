@@ -8,7 +8,7 @@
 2. 一直以来都打算做一个自己的个人网站，但是无奈后端出身的我对于美感的把握真心不怎么样。只有借助bootstrap的威力才能将页面写的稍微好看一点。  
 3. 至于以后我做前端工作的时候肯定会好好把css这一块知识补充起来的。这个项目有两大部分，除了我的个人站点之外还会花费很大一部分时间做一个UI控件库，现在的项目计划[issue](https://github.com/xiaomo-info/xiaomo-info-web/issues?q=is%3Aopen+is%3Aissue+milestone%3A%E9%80%9A%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93)
 
-![image](https://cloud.githubusercontent.com/assets/12625278/17553768/50c6301e-5f3a-11e6-9e19-7754b085aec5.png)
+![image1](https://cloud.githubusercontent.com/assets/12625278/17553768/50c6301e-5f3a-11e6-9e19-7754b085aec5.png)
 
 # 三、本项目相关
 这个项目既然定位于个人站点，那么内容肯定是偏向于个人信息展示，以及服务自我和他人为目的。所以平时遇到好的技术大牛的博客、好的技术、正在研究的东西

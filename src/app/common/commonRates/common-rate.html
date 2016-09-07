@@ -1,7 +1,5 @@
 <h4>请评分</h4>
-<rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"
-        (onHover)="hoveringOver($event)" (onLeave)="resetStar($event)"
-        [titles]="['one','two','three']"></rating>
+<sm-rating [(ngModel)]="rate" class="massive star" (onRate)="onReceiveRating($event)" [maxRating]="max"></sm-rating>
         &nbsp;<span class="alert alert-success">{{rate}}分</span>
 <span class="label"
       [ngClass]="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}"

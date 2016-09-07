@@ -3,7 +3,6 @@ import { Component,Input, OnInit } from '@angular/core';
 import { LinkModel } from './link.model';
 
 @Component({
-  moduleId: module.id,
   selector: 'common-link',
   styles:[require('./commonLink.scss')],
   template:require('./commonLink.html')

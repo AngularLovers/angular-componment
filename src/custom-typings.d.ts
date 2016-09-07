@@ -46,23 +46,50 @@
 declare module "*"
 ;
 
-// Extra variables that live on Global that will be replaced by webpack DefinePlugin
+
+/**
+ * 变量
+ */
 declare var ENV: string;
 declare var HMR: boolean;
 declare var jQuery: any;
+declare var System: SystemJS;
 
-interface GlobalEnvironment {
-  ENV;
-  HMR;
+interface SystemJS {
+  import: (path?: string) => Promise<any>;
 }
 
+/**
+ * 全局环境
+ */
+interface GlobalEnvironment {
+  ENV: string;
+  HMR: boolean;
+  SystemJS: SystemJS;
+  System: SystemJS;
+}
+
+/**
+ *  ES6加载器
+ */
 interface Es6PromiseLoader {
   (id: string): (exportName?: string) => Promise<any>;
 }
 
+/**
+ * 工厂承诺载入器
+ */
 type FactoryEs6PromiseLoader = () => Es6PromiseLoader;
+
+/**
+ * 工厂承诺
+ */
 type FactoryPromise = () => Promise<any>;
 
+
+/**
+ * 异步路由
+ */
 type AsyncRoutes = {
   [component: string]: Es6PromiseLoader |
     Function |
@@ -71,17 +98,24 @@ type AsyncRoutes = {
 };
 
 
+/**
+ * 回调
+ */
 type IdleCallbacks = Es6PromiseLoader |
   Function |
   FactoryEs6PromiseLoader |
   FactoryPromise ;
 
+
+/**
+ *  webpack模块
+ */
 interface WebpackModule {
   hot: {
     data?: any,
     idle: any,
     accept(dependencies?: string | string[], callback?: (updatedDependencies?: any) => void): void;
-    decline(dependencies?: string | string[]): void;
+    decline(deps?: any | string | string[]): void;
     dispose(callback?: (data?: any) => void): void;
     addDisposeHandler(callback?: (data?: any) => void): void;
     removeDisposeHandler(callback?: (data?: any) => void): void;
@@ -92,7 +126,9 @@ interface WebpackModule {
   };
 }
 
-
+/**
+ *  webpack加载
+ */
 interface WebpackRequire {
   (id: string): any;
   (paths: string[], callback: (...modules: any[]) => void): void;
@@ -100,23 +136,47 @@ interface WebpackRequire {
   context(directory: string, useSubDirectories?: boolean, regExp?: RegExp): WebpackContext;
 }
 
+/**
+ * webpack上下文
+ */
 interface WebpackContext extends WebpackRequire {
   keys(): string[];
 }
 
+/**
+ * 错误追踪限制
+ */
 interface ErrorStackTraceLimit {
   stackTraceLimit: number;
 }
 
 
-// Extend typings
+/**
+ * node 加载
+ */
 interface NodeRequire extends WebpackRequire {
 }
+
+/**
+ * 错误构造函数
+ */
 interface ErrorConstructor extends ErrorStackTraceLimit {
 }
+
+/**
+ * node载入方法
+ */
 interface NodeRequireFunction extends Es6PromiseLoader {
 }
+
+/**
+ * node 模块
+ */
 interface NodeModule extends WebpackModule {
 }
+
+/**
+ *  全局
+ */
 interface Global extends GlobalEnvironment {
 }

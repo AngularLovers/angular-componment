@@ -13,7 +13,6 @@
     "baseUrl": "./src",
     "paths": [],
     "types": [
-      "core-js",
       "hammerjs",
       "jasmine",
       "node",

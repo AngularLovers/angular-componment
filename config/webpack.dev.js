@@ -5,6 +5,7 @@
 const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 
 /**
  * Webpack Plugins
@@ -114,6 +115,14 @@ module.exports = webpackMerge(commonConfig, {
         'HMR': METADATA.HMR,
       }
     }),
+
+    /**
+     * Plugin: NamedModulesPlugin (experimental)
+     * Description: Uses file names as module name.
+     *
+     * See: https://github.com/webpack/webpack/commit/a04ffb928365b19feb75087c63f13cadfc08e1eb
+     */
+    new NamedModulesPlugin(),
   ],
 
   /**

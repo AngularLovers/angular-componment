@@ -2,8 +2,6 @@
  * Angular 2 decorators and services
  */
 import { Component, OnInit, ViewEncapsulation } from "@angular/core";
-import { WebNavbarComponent } from "./web1Home/homeNavbar";
-import { WebFooterComponent, WebHeaderComponent, BaBackTop } from "common";
 import { AppState } from "./app.service";
 import { PreLoaderService } from "services";
 import './app.loader';
@@ -15,7 +13,6 @@ import './app.loader';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  directives: [WebHeaderComponent, WebNavbarComponent, WebFooterComponent,BaBackTop],
   providers: [PreLoaderService],
   styles:[require('./app.scss'),require('normalize.css')],
   template: require('./app.html')

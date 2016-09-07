@@ -6,7 +6,6 @@ let template = require('./common-tab.html');
 
 @Component({
   selector: 'common-tab',
-  directives: [TAB_DIRECTIVES],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: template
 })

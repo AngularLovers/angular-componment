@@ -8,7 +8,7 @@ import { removeNgStyles, createNewHosts } from "@angularclass/hmr";
 import { ROUTES } from "./app.routes";
 import { App } from "./app.component";
 import { APP_RESOLVER_PROVIDERS } from "./app.resolver";
-import { AppState } from "./app.service";
+import { AppState,InteralStateType } from "./app.service";
 import { WebHeaderComponent, WebFooterComponent, BaBackTop } from "common";
 import { WebHomeComponent } from "./web1Home/web-home.component";
 import { WebTestComponent } from "./web7Test/web-test.component";
@@ -17,6 +17,9 @@ import { WebProjectComponent } from "./web5Project/web-project.component";
 import { WebAboutComponent } from "./web6About/web-about.component";
 import { WebJapanComponent } from "./web3Japan/web-japan.component";
 import { WebNavbarComponent } from "./web1Home/homeNavbar/home-navbar.component";
+import { WebIntroduceComponent } from "./web1Home/homeIntroduce/home-introduce";
+import { WebBannerComponent } from "./web1Home/homeBanner/home-banner.component";
+import { ProjectItemComponent } from "./web5Project/projectItem/projectItem.component";
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -44,7 +47,10 @@ const APP_PROVIDERS = [
     WebJapanComponent,
     WebTechnologyComponent,
     WebProjectComponent,
-    WebAboutComponent
+    WebAboutComponent,
+    WebBannerComponent,
+    ProjectItemComponent,
+    WebIntroduceComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
@@ -57,28 +63,33 @@ const APP_PROVIDERS = [
     APP_PROVIDERS
   ]
 })
-export class AppModule {
-  constructor(public appRef: ApplicationRef, public appState: AppState) {
-  }
 
-  hmrOnInit(store) {
+
+  type StoreType = {
+  state: InteralStateType,
+  disposeOldHosts: () => void
+};
+
+
+export class AppModule {
+  constructor(public appRef: ApplicationRef, public appState: AppState) {}
+  hmrOnInit(store: StoreType) {
     if (!store || !store.state) return;
     console.log('HMR store', store);
     this.appState._state = store.state;
     this.appRef.tick();
     delete store.state;
   }
-
-  hmrOnDestroy(store) {
-    var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
+  hmrOnDestroy(store: StoreType) {
+    const cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
     // recreate elements
-    store.state = this.appState._state;
+    const state = this.appState._state;
+    store.state = state;
     store.disposeOldHosts = createNewHosts(cmpLocation);
     // remove styles
     removeNgStyles();
   }
-
-  hmrAfterDestroy(store) {
+  hmrAfterDestroy(store: StoreType) {
     // display new elements
     store.disposeOldHosts();
     delete store.disposeOldHosts;

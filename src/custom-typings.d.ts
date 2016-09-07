@@ -63,8 +63,8 @@ interface SystemJS {
  * 全局环境
  */
 interface GlobalEnvironment {
-  ENV;
-  HMR;
+  ENV: string;
+  HMR: boolean;
   SystemJS: SystemJS;
   System: SystemJS;
 }

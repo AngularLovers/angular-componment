@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 export class PreLoaderService {
 
   private selector: string = 'preloader'; //选择器
-  private element: HTMLElement; //接收类型
+  public element: HTMLElement; //接收类型
   private static loaders: Array<Promise<any>> = [];  //loader数组
 
 
@@ -26,7 +26,7 @@ export class PreLoaderService {
    * 隐藏
    * @param delay
    */
-  public hide(delay: number = 0): void {
+  public static hide(delay: number = 0): void {
     setTimeout(() => {
       this.element.style['display'] = 'none';
     }, delay);

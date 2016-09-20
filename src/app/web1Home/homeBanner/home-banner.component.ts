@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'web-banner',
@@ -7,11 +7,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 })
 export class WebBannerComponent implements OnInit {
 
-  clientWidth:number;
-
   constructor() {
-    this.clientWidth = document.body.clientWidth;
-    console.log(this.clientWidth);
+
   }
 
   ngOnInit() {

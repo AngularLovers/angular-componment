@@ -1,32 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Logger } from "services";
-import {
-  CommonCkeditorComponent,
-  CommonBaiduComponent,
-  CommonModalComponent,
-  CommonRadioComponent,
-  CommonInputComponent,
-  CommonTagComponent,
-  CommonButtonComponent,
-  CommonBadgeComponent,
-  CommonCanvasComponent,
-  CommonSliderComponent
-} from "common";
 
 @Component({
   selector: 'web-test',
-  pipes: [],
-  directives: [
-    CommonCkeditorComponent,
-    CommonBaiduComponent,
-    CommonSliderComponent,
-    CommonModalComponent,
-    CommonRadioComponent,
-    CommonInputComponent,
-    CommonTagComponent,
-    CommonButtonComponent,
-    CommonBadgeComponent,
-    CommonCanvasComponent],
   styles: [
     require('./web-test.scss')
   ],

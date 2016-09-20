@@ -4,8 +4,6 @@ import { GoodBlogItem } from "./goodBlog-item.model";
 
 @Component({
   selector: 'goodBlog-item',
-  directives: [],
-  pipes: [],
   styles: [require('./goodBlog-item.scss')],
   template: require('./goodBlog-item.html')
 })

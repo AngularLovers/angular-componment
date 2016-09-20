@@ -13,7 +13,6 @@ import './app.loader';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  providers: [PreLoaderService],
   styles:[require('./app.scss'),require('normalize.css')],
   template: require('./app.html')
 })
@@ -21,11 +20,9 @@ export class App implements OnInit{
 
   /**
    * 构造函数
-   * @param loader
    * @param appState
    */
   constructor(
-    private loader:PreLoaderService,
     public appState: AppState) {
 
   }
@@ -42,7 +39,7 @@ export class App implements OnInit{
    */
   public ngAfterViewInit():void {
     PreLoaderService.load().then(() => {
-      this.loader.hide();
+      PreLoaderService.hide();
     });
   }
 

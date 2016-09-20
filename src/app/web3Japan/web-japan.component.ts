@@ -3,8 +3,6 @@ import { Logger } from "services";
 
 @Component({
   selector: 'web-focus',
-  pipes: [],
-  directives: [],
   styles: [
     require('./web-janpan.scss')
   ],

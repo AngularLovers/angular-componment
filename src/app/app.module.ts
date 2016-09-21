@@ -1,7 +1,3 @@
-///<reference path="web1Home/homeIntroduce/home-introduce.ts"/>
-///<reference path="web5Project/projectItem/projectItem.component.ts"/>
-///<reference path="web1Home/homeBanner/home-banner.component.ts"/>
-///<reference path="web6About/web-about.component.ts"/>
 import { NgModule, ApplicationRef } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";

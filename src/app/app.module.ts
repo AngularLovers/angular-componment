@@ -26,8 +26,6 @@ import { GoodBlogItemComponent } from "./web2Technology/goodBlogItem/goodBlog-it
  * Platform and Environment providers/directives/pipes
  */
 
-// App is our top level component
-
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,

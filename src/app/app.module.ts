@@ -1,5 +1,5 @@
 /**
- *  module
+ *   module
  */
 
 import { NgModule, ApplicationRef } from "@angular/core";

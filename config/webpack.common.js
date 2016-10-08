@@ -11,19 +11,17 @@ const helpers = require('./helpers');
 // problem with copy-webpack-plugin
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
-const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin'); 
 
 /*
  * Webpack Constants
  */
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
-  title: '小莫的个人网站',
+  title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
@@ -81,14 +79,8 @@ module.exports = function(options) {
        */
       extensions: ['', '.ts', '.js', '.json'],
 
-      // Make sure root is src
-      root: helpers.root('src'),
-      alias: {
-        'common': helpers.root('./src/app/common/index.ts'),
-        'services': helpers.root('./src/app/services/index.ts')
-      },
-      // remove other default values
-      modulesDirectories: ['node_modules']
+      // An array of directory names to be resolved to the current directory
+      modules: [helpers.root('src'), 'node_modules'],
 
     },
 
@@ -154,14 +146,7 @@ module.exports = function(options) {
           test: /\.json$/,
           loader: 'json-loader'
         },
-        {
-          test: /\.scss$/,
-          loader: `raw!postcss!sass?outputStyle=expanded&includePaths[]=${helpers.root('src/styles')}/`
-        },
-        {
-          test: /initial\.scss$/,
-          loader: ExtractTextPlugin.extract({fallbackLoader: 'style-loader', loader: 'css-loader!sass-loader'})
-        },
+
         /*
          * to string and css loader support for *.css files
          * Returns file content as string
@@ -188,23 +173,7 @@ module.exports = function(options) {
         {
           test: /\.(jpg|png|gif)$/,
           loader: 'file'
-        },
-        {
-          test: /\.woff(\?.*)?$/,
-          loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff'
-        },
-        {
-          test: /\.woff2(\?.*)?$/,
-          loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff2'
-        },
-        {test: /\.otf(\?.*)?$/, loader: 'file?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=font/opentype'},
-        {
-          test: /\.ttf(\?.*)?$/,
-          loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream'
-        },
-        {test: /\.eot(\?.*)?$/, loader: 'file?prefix=fonts/&name=[path][name].[ext]'},
-        {test: /\.svg(\?.*)?$/, loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml'},
-        {test: /\.(png|jpg)$/, loader: 'url?limit=8192'}
+        }
       ],
 
       postLoaders: [
@@ -254,7 +223,7 @@ module.exports = function(options) {
       /**
        * Plugin: ContextReplacementPlugin
        * Description: Provides context to Angular's use of System.import
-       *
+       * 
        * See: https://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
        * See: https://github.com/angular/angular/issues/11580
        */
@@ -275,6 +244,16 @@ module.exports = function(options) {
       new CopyWebpackPlugin([{
         from: 'src/assets',
         to: 'assets'
+      }], {
+        ignore: [
+          'humans.txt',
+          'robots.txt'
+        ]
+      }),
+      new CopyWebpackPlugin([{ 
+        from: 'src/assets/robots.txt'
+      }, { 
+        from: 'src/assets/humans.txt' 
       }]),
 
       /*
@@ -315,31 +294,23 @@ module.exports = function(options) {
       new HtmlElementsPlugin({
         headTags: require('./head-config.common')
       }),
-      new webpack.ProvidePlugin({
-        jQuery: 'jquery',
-        $: 'jquery',
-        jquery: 'jquery'
-      }),
-      new ExtractTextPlugin({filename: 'initial.css', disable: false, allChunks: true}),
-    new WebpackNotifierPlugin({
-      title: '小莫的个人网站'
-    })
-  ],
 
-  /*
-   * Include polyfills or mocks for various node stuff
-   * Description: Node configuration
-   *
-   * See: https://webpack.github.io/docs/configuration.html#node
-   */
-  node: {
-    global: 'window',
-    crypto: 'empty',
-    process: true,
-    module: false,
-    clearImmediate: false,
-    setImmediate: false
-  }
+    ],
+
+    /*
+     * Include polyfills or mocks for various node stuff
+     * Description: Node configuration
+     *
+     * See: https://webpack.github.io/docs/configuration.html#node
+     */
+    node: {
+      global: 'window',
+      crypto: 'empty',
+      process: true,
+      module: false,
+      clearImmediate: false,
+      setImmediate: false
+    }
 
   };
 }

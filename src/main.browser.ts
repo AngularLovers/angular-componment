@@ -18,8 +18,8 @@ export function main(): Promise<any> {
     .bootstrapModule(AppModule)
     .then(decorateModuleRef)
     .catch(err => console.error(err));
-
 }
 
+// needed for hmr
+// in prod this is replace for document ready
 bootloader(main);
-

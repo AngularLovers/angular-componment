@@ -13,6 +13,7 @@ import { Home } from "./home";
 import { About } from "./about";
 import { NoContent } from "./no-content";
 import { XLarge } from "./home/x-large";
+import { HeaderComponent,FooterComponent } from "./common/index";
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -37,6 +38,8 @@ type StoreType = {
 @NgModule({
   bootstrap: [App],
   declarations: [
+    HeaderComponent,
+    FooterComponent,
     App,
     About,
     Home,

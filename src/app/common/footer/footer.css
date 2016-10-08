@@ -1,0 +1,22 @@
+footer {
+  color: gray;
+}
+
+footer .footer {
+  padding-top: 40px;
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+
+footer .footer h5 {
+  font-size: 13px;
+}
+
+footer .footer h6 a {
+  font-size: 12px;
+  text-decoration: none;
+  color: darkgray;
+}

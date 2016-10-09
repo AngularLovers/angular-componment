@@ -18,6 +18,8 @@ import { BannerComponent } from "./home/banner/banner";
 import { WorkComponent } from "./home/work/work";
 import { WorksComponent } from "./home/works/works";
 import { SkillsComponent } from "./home/skills/skills";
+import { Board } from "./board/board";
+import { DuoShuoCommentComponent } from "./common/duoshuo-comment/duoshuo-comment.component";
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -50,10 +52,15 @@ type StoreType = {
     WorkComponent,
     WorksComponent,
     SkillsComponent,
+    //关于我
+
+    //留言板
+    DuoShuoCommentComponent,
     // 导航组件
     App,
     About,
     Home,
+    Board,
     NoContent,
     // 指令
     XLarge

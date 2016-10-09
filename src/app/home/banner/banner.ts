@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'xiaomo-banner',
@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styles:[require('./banner.css')]
 })
 export class BannerComponent implements OnInit {
-  constructor() {
+  constructor(public ref:ElementRef) {
   }
 
   ngOnInit() {
+    let imgUrl = require('./banner.png');
+    let banner = this.ref.nativeElement.querySelector('#banner');
+    banner.src = imgUrl;
   }
 }

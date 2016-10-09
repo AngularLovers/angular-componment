@@ -42,16 +42,20 @@ type StoreType = {
 @NgModule({
   bootstrap: [App],
   declarations: [
+    //公共部分
     HeaderComponent,
     FooterComponent,
+    //首页
     BannerComponent,
     WorkComponent,
     WorksComponent,
     SkillsComponent,
+    // 导航组件
     App,
     About,
     Home,
     NoContent,
+    // 指令
     XLarge
   ],
   imports: [ // import Angular's modules

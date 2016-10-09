@@ -14,6 +14,9 @@ import { About } from "./about";
 import { NoContent } from "./no-content";
 import { XLarge } from "./home/x-large";
 import { HeaderComponent,FooterComponent } from "./common/index";
+import { BannerComponent } from "./home/banner/banner";
+import { WorkComponent } from "./home/work/work";
+import { WorksComponent } from "./home/works/works";
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -40,6 +43,9 @@ type StoreType = {
   declarations: [
     HeaderComponent,
     FooterComponent,
+    BannerComponent,
+    WorkComponent,
+    WorksComponent,
     App,
     About,
     Home,

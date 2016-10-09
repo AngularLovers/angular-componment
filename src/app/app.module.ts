@@ -17,6 +17,7 @@ import { HeaderComponent,FooterComponent } from "./common/index";
 import { BannerComponent } from "./home/banner/banner";
 import { WorkComponent } from "./home/work/work";
 import { WorksComponent } from "./home/works/works";
+import { SkillsComponent } from "./home/skills/skills";
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -46,6 +47,7 @@ type StoreType = {
     BannerComponent,
     WorkComponent,
     WorksComponent,
+    SkillsComponent,
     App,
     About,
     Home,

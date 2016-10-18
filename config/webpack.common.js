@@ -1,5 +1,5 @@
 /**
- * @author: @AngularClass
+ * @author: @AngularLovers
  */
 
 const webpack = require('webpack');

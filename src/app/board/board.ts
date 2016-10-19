@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   styles:[require('./board.css')],
   template:require('./board.html')
 })
-export class Board implements OnInit {
+export class BoardComponent implements OnInit {
   constructor() {
   }
 

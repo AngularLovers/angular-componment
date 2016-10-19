@@ -17,7 +17,7 @@ import { AppState } from './app.service';
   ],
   template: require('./app.html')
 })
-export class App {
+export class AppComponent {
   constructor(
     public appState: AppState) {
 

@@ -1,14 +1,14 @@
 import { Routes } from "@angular/router";
-import { Home } from "./home";
-import { About } from "./about";
-import { NoContent } from "./no-content";
-import { Board } from "./board/board";
+import { HomeComponent } from "./home";
+import { AboutComponent } from "./about";
+import { NoContentComponent } from "./no-content";
+import { BoardComponent } from "./board/board";
 
 
 export const ROUTES: Routes = [
-  {path: '', component: Home},
-  {path: 'home', component: Home},
-  {path: 'board', component: Board},
-  {path: 'about', component: About},
-  {path: '**', component: NoContent},
+  {path: '', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'board', component: BoardComponent},
+  {path: 'about', component: AboutComponent},
+  {path: '**', component: NoContentComponent},
 ];

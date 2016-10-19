@@ -6,7 +6,7 @@ import { AppState } from "../app.service";
   styleUrls: ['./home.component.css'],
   templateUrl: './home.component.html'
 })
-export class Home {
+export class HomeComponent {
 
   // Set our default values
   localState = {value: ''};

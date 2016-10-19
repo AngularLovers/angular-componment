@@ -6,19 +6,19 @@ import { RouterModule } from "@angular/router";
 import { removeNgStyles, createNewHosts, createInputTransfer } from "@angularclass/hmr";
 import { ENV_PROVIDERS } from "./environment";
 import { ROUTES } from "./app.routes";
-import { App } from "./app.component";
+import { AppComponent } from "./app.component";
 import { APP_RESOLVER_PROVIDERS } from "./app.resolver";
 import { AppState, InternalStateType } from "./app.service";
-import { Home } from "./home";
-import { About } from "./about";
-import { NoContent } from "./no-content";
-import { XLarge } from "./home/x-large";
+import { HomeComponent } from "./home";
+import { AboutComponent } from "./about";
+import { NoContentComponent } from "./no-content";
+import { XLargeDirective } from "./home/x-large";
 import { HeaderComponent,FooterComponent } from "./common/index";
 import { BannerComponent } from "./home/banner/banner";
 import { WorkComponent } from "./home/work/work";
 import { WorksComponent } from "./home/works/works";
 import { SkillsComponent } from "./home/skills/skills";
-import { Board } from "./board/board";
+import { BoardComponent } from "./board/board";
 import { DuoShuoCommentComponent } from "./common/duoshuo-comment/duoshuo-comment.component";
 
 /*
@@ -42,7 +42,7 @@ type StoreType = {
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
 @NgModule({
-  bootstrap: [App],
+  bootstrap: [AppComponent],
   declarations: [
     //公共部分
     HeaderComponent,
@@ -57,13 +57,13 @@ type StoreType = {
     //留言板
     DuoShuoCommentComponent,
     // 导航组件
-    App,
-    About,
-    Home,
-    Board,
-    NoContent,
+    AppComponent,
+    AboutComponent,
+    HomeComponent,
+    BoardComponent,
+    NoContentComponent,
     // 指令
-    XLarge
+    XLargeDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,

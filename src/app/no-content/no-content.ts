@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   template: require('./no-content.html'),
   styles:[require('./no-content.css')]
 })
-export class NoContent {
+export class NoContentComponent {
 
 }

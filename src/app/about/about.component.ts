@@ -13,7 +13,7 @@ console.log('`About` component loaded asynchronously');
   styles: [require('./about.css')],
   template:require('./about.html')
 })
-export class About {
+export class AboutComponent {
   localState: any;
   constructor(public route: ActivatedRoute) {
 
